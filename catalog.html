@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>HTML Academy: Девайс-каталог</title>
+</head>
+<body>
+	<header class="main-header container">
+		<div class="logo"><a href="#">Device</a></div>
+		<div class="product-block">
+			<form class="search" action="" method="post">
+				<input type="search" name="search" placeholder="Поиск по сайту">
+				<input type="submit" value="Найти">
+			</form>
+			<nav class="catalog">
+				<a href="#" class="catalog-title">Каталог товаров</a>
+				<ul class="catalog-items">
+					<li><a href="#">Виртуальная реальность</a></li>
+					<li><a href="#">Моноподы для селфи</a></li>
+					<li><a href="#">Экшн-камеры</a></li>
+					<li><a href="#">Фитнесс-браслеты</a></li>
+					<li><a href="#">Умные часы</a></li>
+					<li><a href="#">Квадрокоптеры</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="user-block">
+			<a href="#">Валентин Петухов</a>
+			<a href="#">Выйти</a>
+			<a href="#">Сравнить</a>
+			<a href="#">Корзина</a>
+			<nav class="service">
+				<ul>
+					<li><a href="#">Доставка</a></li>
+					<li><a href="#">Гарантия</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<h1>Моноподы для селфи</h1>
+		<nav>
+			<ul>
+				<li><a href="">Главная</a></li>
+				<li><a href="">Каталог товаров</a></li>
+				<li><a href="">Моноподы для селфи</a></li>
+			</ul>
+		</nav>
+
+		<section class="filters">
+			<h2>Фильтр:</h2>	
+			<form action="" method="post" oninput="maxcost.value=slider.value">
+				<div class="filters-cost">
+					<!--Я пока не придумала, как сделать слайдер с двумя рабочими ползунками, поэтому пока только так: один ползунок (на минимальном значении) муляж, второй - рабочий. Есть вариант сделать два инпута и спозиционировать их в одну линию, но все равно тогда каждый из ползунков будет работать только в своей половине диапазона -->
+					<h3>Стоимость</h3>
+					<input id="slider" type="range" name="slider" min="0" max="8500" step="100" value="5000">
+					<span>от 0</span> <span>до</span>
+					<output id="maxcost" name="cost">5000</output>
+				</div>
+
+				<div class="filters-color">
+					<h3>Цвет</h3>
+					<label>
+						<input type="checkbox" name="black" checked>
+						Черный
+					</label>
+					<label>
+						<input type="checkbox" name="white">
+						Белый
+					</label>
+					<label>
+						<input type="checkbox" name="blue" checked>
+						Синий
+					</label>
+					<label>
+						<input type="checkbox" name="red" checked>
+						Красный
+					</label>
+					<label>
+						<input type="checkbox" name="pink">
+						Розовый
+					</label>
+				</div>
+
+				<div class="filters-bluetooth">
+					<h3>Bluetooth</h3>
+					<label>
+					<input type="radio" name="bluetooth" value="yes" checked>
+						Есть
+					</label>
+					<label>
+						<input type="radio" name="bluetooth" value="not">
+						Нет
+					</label>
+				</div>
+
+				<button type="submit">Показать</button>
+			</form>
+		</section>
+
+		<section class="products">
+			<h2>Сортировка</h2>
+			<ul>
+				<li><a href="#">По цене</a></li>
+				<li><a href="#">По типу</a></li>
+				<li><a href="#">По популярности</a></li>
+			</ul>
+			
+			<artical class="products-item">
+				<div class="picture">
+					<!--Значок NEW будет сделан как пседоэлемент .picture::before -->
+					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
+					<!--а здесь я, возможно, перемудрила -->
+					<form class="add-to-basket" action="" method="get" name="basket">
+						<input type="hidden" name="product" value="/selfie/more1.html">
+						<button type="submit">В корзину</button>
+					</form>
+					<form class="add-to-compare" action="" method="get" name="compare">
+						<input type="hidden" name="product" value="/selfie/more1.html">
+						<button type="submit">Добавить к сравнению</button>
+					</form>
+				</div>
+				<h3>
+					<a href="#">Любительская селфи-палка</a>
+				</h3>
+				<span>500 руб.</span>
+			</artical>
+
+			<artical class="products-item">
+				<div class="picture">
+					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
+					<form class="add-to-basket" action="" method="get" name="basket">
+						<input type="hidden" name="product" value="/selfie/more2.html">
+						<button type="submit">В корзину</button>
+					</form>
+					<form class="add-to-compare" action="" method="get" name="compare">
+						<input type="hidden" name="product" value="/selfie/more2.html">
+						<button type="submit">Добавить к сравнению</button>
+					</form>
+				</div>
+				<h3>
+					<a href="#">Профессиональная селфи-палка</a>
+				</h3>
+				<span>1500 руб.</span>
+			</artical>
+
+			<artical class="products-item">
+				<div class="picture">
+					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
+					<form class="add-to-basket" action="" method="get" name="basket">
+						<input type="hidden" name="product" value="/selfie/more3.html">
+						<button type="submit">В корзину</button>
+					</form>
+					<form class="add-to-compare" action="" method="get" name="compare">
+						<input type="hidden" name="product" value="/selfie/more3.html">
+						<button type="submit">Добавить к сравнению</button>
+					</form>
+				</div>
+				<h3>
+					<a href="#">Непотопляемая селфи-палка</a>
+				</h3>
+				<span>2500 руб.</span>
+			</artical>
+
+			<artical class="products-item">
+				<div class="picture">
+					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
+					<form class="add-to-basket" action="" method="get" name="basket">
+						<input type="hidden" name="product" value="/selfie/more4.html">
+						<button type="submit">В корзину</button>
+					</form>
+					<form class="add-to-compare" action="" method="get" name="compare">
+						<input type="hidden" name="product" value="/selfie/more4.html">
+						<button type="submit">Добавить к сравнению</button>
+					</form>
+				</div>
+				<h3>
+					<a href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a>
+				</h3>
+				<span>4900 руб.</span>
+			</artical>
+
+			<div class="products-paginator">
+				<a href="#">Назад</a>
+				<a class="current" href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">Вперед</a>
+			</div>
+			
+		</section>
+	</main>
+
+	<footer class="container">
+		<div class="logo"><a href="#">Device</a></div>
+		<div class="user-block">
+			<a href="#">Выйти</a>
+			<a href="#">Сравнить</a>
+			<a href="#">Корзина</a>
+		</div>
+		<p>г.Москва, ул. Строителей, 15 
+		</p>
+		<nav class="service">
+			<ul>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Гарантия</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+		<p>Тел:+7(495) 495-95-95
+		</p>
+		<div class="social">
+			<a href="#">facebook</a>
+			<a href="#">instagram</a>
+			<a href="#">twitter</a>
+		</div>
+		<div class="copyright">
+			<a href="#">HTMLAcademy.ru</a>
+		</div>
+	</footer>  
+</body>
+</html>
