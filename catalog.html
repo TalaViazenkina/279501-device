@@ -25,31 +25,32 @@
 			</nav>
 		</div>
 		<div class="user-block">
-			<a href="#">Валентин Петухов</a>
-			<a href="#">Выйти</a>
-			<a href="#">Сравнить</a>
-			<a href="#">Корзина</a>
-			<nav class="service">
-				<ul>
-					<li><a href="#">Доставка</a></li>
-					<li><a href="#">Гарантия</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
-			</nav>
+			<ul class="personal">
+				<li><a href="#">Валентин Петухов</a></li>
+				<li><a href="#">Выйти</a></li>
+				<li><a href="#">Сравнить</a></li>
+				<li><a href="#">Корзина</a></li>
+			</ul>
+			
+			<ul class="service">
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Гарантия</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
 		</div>
 	</header>
 
 	<main>
 		<h1>Моноподы для селфи</h1>
-		<nav>
-			<ul>
-				<li><a href="">Главная</a></li>
-				<li><a href="">Каталог товаров</a></li>
-				<li><a href="">Моноподы для селфи</a></li>
+		
+			<ul class="breadcrumbs">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Каталог товаров</a></li>
+				<li>Моноподы для селфи</li>
 			</ul>
-		</nav>
+		
 
-		<section class="filters">
+		<aside class="filters">
 			<h2>Фильтр:</h2>	
 			<form action="" method="post" oninput="maxcost.value=slider.value">
 				<div class="filters-cost">
@@ -98,97 +99,99 @@
 
 				<button type="submit">Показать</button>
 			</form>
-		</section>
+		</aside>
 
 		<section class="products">
 			<h2>Сортировка</h2>
-			<ul>
+			<ul class="products-sort">
 				<li><a href="#">По цене</a></li>
 				<li><a href="#">По типу</a></li>
 				<li><a href="#">По популярности</a></li>
 			</ul>
+
+			<ul class="arrows">
+				<li class="arrow-top">
+					<a herf="#"></a>
+				</li>
+				<li class="arrow-down">
+					<a herf="#"></a>
+				</li>
+			</ul>
 			
-			<artical class="products-item">
-				<div class="picture">
+			<article class="products-item">
+				<div class="products-picture">
 					<!--Значок NEW будет сделан как пседоэлемент .picture::before -->
 					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
-					<!--а здесь я, возможно, перемудрила -->
-					<form class="add-to-basket" action="" method="get" name="basket">
-						<input type="hidden" name="product" value="/selfie/more1.html">
-						<button type="submit">В корзину</button>
-					</form>
-					<form class="add-to-compare" action="" method="get" name="compare">
-						<input type="hidden" name="product" value="/selfie/more1.html">
-						<button type="submit">Добавить к сравнению</button>
-					</form>
 				</div>
-				<h3>
+				<h1>
 					<a href="#">Любительская селфи-палка</a>
-				</h3>
+				</h1>
 				<span>500 руб.</span>
-			</artical>
-
-			<artical class="products-item">
-				<div class="picture">
-					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
-					<form class="add-to-basket" action="" method="get" name="basket">
-						<input type="hidden" name="product" value="/selfie/more2.html">
-						<button type="submit">В корзину</button>
-					</form>
-					<form class="add-to-compare" action="" method="get" name="compare">
-						<input type="hidden" name="product" value="/selfie/more2.html">
-						<button type="submit">Добавить к сравнению</button>
-					</form>
+				<div class="products-purshase">
+					<a href="#">В корзину</a>
+					<a href="#">Добавить к сравнению</a>
 				</div>
-				<h3>
+			</article>
+
+			<article class="products-item">
+				<div class="products-picture">
+					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
+				</div>
+				<h1>
 					<a href="#">Профессиональная селфи-палка</a>
-				</h3>
+				</h1>
 				<span>1500 руб.</span>
-			</artical>
-
-			<artical class="products-item">
-				<div class="picture">
-					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
-					<form class="add-to-basket" action="" method="get" name="basket">
-						<input type="hidden" name="product" value="/selfie/more3.html">
-						<button type="submit">В корзину</button>
-					</form>
-					<form class="add-to-compare" action="" method="get" name="compare">
-						<input type="hidden" name="product" value="/selfie/more3.html">
-						<button type="submit">Добавить к сравнению</button>
-					</form>
+				<div class="products-purshase">
+					<a href="#">В корзину</a>
+					<a href="#">Добавить к сравнению</a>
 				</div>
-				<h3>
+			</article>
+
+			<article class="products-item">
+				<div class="products-picture">
+					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
+				</div>
+				<h1>
 					<a href="#">Непотопляемая селфи-палка</a>
-				</h3>
+				</h1>
 				<span>2500 руб.</span>
-			</artical>
-
-			<artical class="products-item">
-				<div class="picture">
-					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
-					<form class="add-to-basket" action="" method="get" name="basket">
-						<input type="hidden" name="product" value="/selfie/more4.html">
-						<button type="submit">В корзину</button>
-					</form>
-					<form class="add-to-compare" action="" method="get" name="compare">
-						<input type="hidden" name="product" value="/selfie/more4.html">
-						<button type="submit">Добавить к сравнению</button>
-					</form>
+				<div class="products-purshase">
+					<a href="#">В корзину</a>
+					<a href="#">Добавить к сравнению</a>
 				</div>
-				<h3>
-					<a href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a>
-				</h3>
-				<span>4900 руб.</span>
-			</artical>
+			</article>
 
-			<div class="products-paginator">
-				<a href="#">Назад</a>
-				<a class="current" href="#">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">Вперед</a>
-			</div>
+			<article class="products-item">
+				<div class="products-picture">
+					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
+				</div>
+				<h1>
+					<a href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a>
+				</h1>
+				<span>4900 руб.</span>
+				<div class="products-purshase">
+					<a href="#">В корзину</a>
+					<a href="#">Добавить к сравнению</a>
+				</div>
+			</article>
+
+			<ul class="products-paginator">
+				<li>
+					<a href="#">Назад</a>
+				</li>
+				<li>
+					<a class="current" href="#">1</a>
+				</li>
+				<li>
+					<a href="#">2</a>
+				</li>
+				<li>
+					<a href="#">3</a>
+				</li>
+				<li>
+					<a href="#">Вперед</a>
+				</li>
+			</ul>
 			
 		</section>
 	</main>
@@ -200,17 +203,17 @@
 			<a href="#">Сравнить</a>
 			<a href="#">Корзина</a>
 		</div>
-		<p>г.Москва, ул. Строителей, 15 
-		</p>
-		<nav class="service">
-			<ul>
+		<div>г.Москва, ул. Строителей, 15 
+		</div>
+		
+			<ul class="service">
 				<li><a href="#">Доставка</a></li>
 				<li><a href="#">Гарантия</a></li>
 				<li><a href="#">Контакты</a></li>
 			</ul>
-		</nav>
-		<p>Тел:+7(495) 495-95-95
-		</p>
+		
+		<div>Тел:+7(495) 495-95-95
+		</div>
 		<div class="social">
 			<a href="#">facebook</a>
 			<a href="#">instagram</a>
