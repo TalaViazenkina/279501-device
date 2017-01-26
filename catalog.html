@@ -3,13 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Девайс&#x2010;каталог</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="main-header container">
-		<div class="logo"><a href="#">Device</a></div>
+		<div class="logo"><a href="index.html">Device</a></div>
 		<div class="product-block">
-			<form class="search" action="https://echo.htmlacademy.ru" method="post">
-				<input type="search" name="search" placeholder="Поиск по сайту">
+			<form class="search" action="https://echo.htmlacademy.ru" method="post"><!--добавила label, чтобы навесить на label картинку с лупой в качестве background-image + за счет этого картинка станет "функциональной"  -->
+				<label>
+					<input type="search" name="search" placeholder="Поиск по сайту">
+				</label>
 				<input type="submit" value="Найти">
 			</form>
 			<nav class="catalog">
@@ -45,7 +49,7 @@
 		
 		<ul class="breadcrumbs">
 			<li>
-				<a href="#">Главная</a>
+				<a href="index.html">Главная</a>
 			</li>
 			<li>
 				<a href="#">Каталог товаров</a>
@@ -60,7 +64,7 @@
 			<h2>Фильтр:</h2>	
 			<form action="https://echo.htmlacademy.ru" method="post" oninput="maxcost.value=slider.value">
 				<div class="filters-cost">
-					<!--Я пока не придумала, как сделать слайдер с двумя рабочими ползунками, поэтому пока только так: один ползунок (на минимальном значении) муляж, второй - рабочий. Есть вариант сделать два инпута и спозиционировать их в одну линию, но все равно тогда каждый из ползунков будет работать только в своей половине диапазона -->
+					
 					<h3>Стоимость</h3>
 					<input id="slider" type="range" name="slider" min="0" max="8500" step="100" value="5000">
 					<span>от 0</span> <span>до</span>
@@ -125,14 +129,18 @@
 			</ul>
 			
 			<article class="products-item">
+				<!--для каждого .products-item:
+				для div.products-purshase задаем те же размеры, что и у картинки (width="360" height="380"), полупрозрачный серый цвет и позицинируем над картинкой, задаем display:none; по наведению - display:block -->
+
 				<div class="products-picture">
-					<!--Значок NEW будет сделан как пседоэлемент .picture::before -->
-					<img src="http://placehold.it/150x100" alt="Любительская селфи-палка">
+					<!--Значок NEW будет сделан как пседоэлемент .products-picture::before -->
+					<img src="img/selfie-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
 				</div>
 				<h1>
 					<a href="#">Любительская селфи&#x2010;палка</a>
 				</h1>
 				<span>500 руб.</span>
+				
 				<div class="products-purshase">
 					<a href="#">В корзину</a>
 					<a href="#">Добавить к сравнению</a>
@@ -141,7 +149,7 @@
 
 			<article class="products-item">
 				<div class="products-picture">
-					<img src="http://placehold.it/150x100" alt="Профессиональная селфи-палка">
+					<img src="img/selfie-professional.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
 				</div>
 				<h1>
 					<a href="#">Профессиональная селфи&#x2010;палка</a>
@@ -155,7 +163,7 @@
 
 			<article class="products-item">
 				<div class="products-picture">
-					<img src="http://placehold.it/150x100" alt="Непотопляемая селфи-палка">
+					<img src="img/selfie-insubmersible.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
 				</div>
 				<h1>
 					<a href="#">Непотопляемая селфи&#x2010;палка</a>
@@ -169,7 +177,7 @@
 
 			<article class="products-item">
 				<div class="products-picture">
-					<img src="http://placehold.it/150x100" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
+					<img src="img/selfie-hand.jpg" width="360" height="380" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
 				</div>
 				<h1>
 					<a href="#">Селфи&#x2010;палка &laquo;Следуй за мной&raquo;</a>
@@ -203,7 +211,7 @@
 	</main>
 
 	<footer class="container">
-		<div class="logo"><a href="#">Device</a></div>
+		<div class="logo"><a href="index.html">Device</a></div>
 		<div class="user-block">
 			<ul>
 				<li><a href="#">Выйти</a></li>
@@ -228,7 +236,7 @@
 			<a href="#">twitter</a>
 		</div>
 		<div class="copyright">
-			<a href="#">HTMLAcademy.ru</a>
+			<a href="https://htmlacademy.ru">HTMLAcademy.ru</a>
 		</div>
 	</footer>  
 </body>
