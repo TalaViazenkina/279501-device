@@ -12,7 +12,7 @@
 			<div class="logo">
 				<a href="index.html">Device</a>
 			</div>
-			<div class="user-block">
+			<div class="user-block wrapper">
 				<form class="search" action="https://echo.htmlacademy.ru" method="post"><!--добавила label, чтобы навесить на label картинку с лупой в качестве background-image + за счет этого картинка станет "функциональной"  -->
 					<label>
 						<input type="search" name="search" placeholder="Поиск по сайту">
@@ -20,7 +20,7 @@
 					<input type="submit" value="Найти">
 				</form>
 
-				<ul class="personal">
+				<ul class="personal wrapper">
 					<li><a class="user-name" href="#">Валентин Петухов</a></li>
 					<li><a href="#">Выйти</a></li>
 					<li><a href="#">Сравнить</a></li>
@@ -28,8 +28,8 @@
 				</ul>
 			</div>
 
-			<div class="service-block">
-				<nav class="catalog">
+			<div class="service-block wrapper">
+				<nav class="catalog wrapper">
 					<a href="#" class="catalog-title">Каталог товаров</a>
 					<ul class="catalog-items">
 						<li><a href="#">Виртуальная реальность</a></li>
@@ -41,7 +41,7 @@
 					</ul>
 				</nav>
 
-				<ul class="service">
+				<ul class="service wrapper">
 					<li><a href="#">Доставка</a></li>
 					<li><a href="#">Гарантия</a></li>
 					<li><a href="#">Контакты</a></li>
@@ -51,7 +51,7 @@
 	</header>
 
 	<main class="catalog-main">
-		<div class="container-positioner">
+		<div class="container">
 			<h1>Моноподы для селфи</h1>
 			
 			<ul class="breadcrumbs">
@@ -66,9 +66,9 @@
 				</li>
 			</ul>
 		</div>
-		<div class="container">
+		<div class="wrapper">
 
-			<aside class="filters">
+			<aside class="filters wrapper">
 				<h2>Фильтр:</h2>
 				<form action="https://echo.htmlacademy.ru" method="get" oninput="maxcost.value=slider.value">
 					<div class="filters-cost">
@@ -119,8 +119,8 @@
 				
 			</aside>
 
-			<section class="results">
-				<div class="container-sort">
+			<section class="results wrapper">
+				<div class="container-sort wrapper">
 					<h2>Сортировка:</h2>
 					<ul class="products-sort">
 						<li><a href="#">По цене</a></li>
@@ -138,7 +138,7 @@
 					</ul>
 				</div>
 				
-				<div class="products">
+				<div class="products wrapper">
 					<article class="products-item">
 						<!--для каждого .products-item:
 						для div.products-purshase задаем те же размеры, что и у картинки (width="360" height="380"), полупрозрачный серый цвет и позицинируем над картинкой, задаем display:none; по наведению - display:block -->
@@ -147,10 +147,12 @@
 							<!--Значок NEW будет сделан как пседоэлемент .products-picture::before -->
 							<img src="img/selfie-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
 						</div>
-						<h1>
-							<a href="#">Любительская селфи&#x2010;палка</a>
-						</h1>
-						<span>500 руб.</span>
+						<div class="name-and-price wrapper">
+							<h1>
+								<a href="#">Любительская селфи&#x2010;палка</a>
+							</h1>
+							<span>500 руб.</span>
+						</div>
 						
 						<div class="products-purshase">
 							<a href="#">В корзину</a>
@@ -162,10 +164,14 @@
 						<div class="products-picture">
 							<img src="img/selfie-professional.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
 						</div>
-						<h1>
-							<a href="#">Профессиональная селфи&#x2010;палка</a>
-						</h1>
-						<span>1500 руб.</span>
+
+						<div class="name-and-price wrapper">
+							<h1>
+								<a href="#">Профессиональная селфи&#x2010;палка</a>
+							</h1>
+							<span>1500 руб.</span>
+						</div>
+
 						<div class="products-purshase">
 							<a href="#">В корзину</a>
 							<a href="#">Добавить к сравнению</a>
@@ -176,10 +182,14 @@
 						<div class="products-picture">
 							<img src="img/selfie-insubmersible.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
 						</div>
-						<h1>
-							<a href="#">Непотопляемая селфи&#x2010;палка</a>
-						</h1>
-						<span>2500 руб.</span>
+
+						<div class="name-and-price wrapper">
+							<h1>
+								<a href="#">Непотопляемая селфи&#x2010;палка</a>
+							</h1>
+							<span>2500 руб.</span>
+						</div>
+
 						<div class="products-purshase">
 							<a href="#">В корзину</a>
 							<a href="#">Добавить к сравнению</a>
@@ -190,10 +200,14 @@
 						<div class="products-picture">
 							<img src="img/selfie-hand.jpg" width="360" height="380" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
 						</div>
-						<h1>
-							<a href="#">Селфи&#x2010;палка &laquo;Следуй за мной&raquo;</a>
-						</h1>
-						<span>4900 руб.</span>
+
+						<div class="name-and-price wrapper">
+							<h1>
+								<a href="#">Селфи&#x2010;палка &laquo;Следуй за мной&raquo;</a>
+							</h1>
+							<span>4900 руб.</span>
+						</div>
+
 						<div class="products-purshase">
 							<a href="#">В корзину</a>
 							<a href="#">Добавить к сравнению</a>
@@ -201,7 +215,7 @@
 					</article>
 				</div>
 
-				<ul class="products-paginator">
+				<ul class="products-paginator wrapper">
 					<li>
 						<a href="#">Назад</a>
 					</li>
@@ -227,19 +241,19 @@
 
 	<footer class="main-footer">
 		<div class="container">
-				<ul class="user-block">
-					<li class="logo"><a href="index.html">Device</a></li>
+				<ul class="user-block wrapper">
+					<li class="footer-logo"><a href="index.html">Device</a></li>
 					<li><a href="#">Выйти</a></li>
 					<li><a href="#">Сравнить</a></li>
 					<li><a href="#">Корзина</a></li>
 				</ul>
 			
 
-			<div class="service-block">
-				<div class="adress">г.Москва, ул. Строителей, 15 
+			<div class="service-block wrapper">
+				<div class="address">г.Москва, ул. Строителей, 15 
 				</div>
 
-				<ul class="service">
+				<ul class="service wrapper">
 					<li><a href="#">Доставка</a></li>
 					<li><a href="#">Гарантия</a></li>
 					<li><a href="#">Контакты</a></li>
@@ -249,7 +263,7 @@
 				</div>
 			</div>
 
-			<div class="links">
+			<div class="links wrapper">
 				<div class="social">
 					<a href="#">facebook</a>
 					<a href="#">instagram</a>
