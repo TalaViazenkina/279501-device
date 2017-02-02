@@ -366,6 +366,40 @@ margin-bottom: 80px;
 	line-height: 40px;
 	}
 
+	.write-us {
+		width: 760px;
+		padding: 95px 100px 85px 100px;
+		
+	}
+
+	form.wrapper {
+		flex-wrap: wrap;
+	}
+
+
+.wtite-us label,
+.write-us input,
+.write-us textarea {
+	display: block;
+}
+
+	input[name="name"],
+	input[name="email"] {
+		width: 360px;
+		margin-top: 8px;
+		margin-bottom: 35px;
+	}
+
+	.write-us textarea {
+		width: 760px;
+		height: 156px;
+		margin-top: 8px;
+		margin-bottom: 50px;
+
+	}
+
+
+
 /*футер*/	
 
 .main-footer {
