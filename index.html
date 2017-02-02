@@ -32,14 +32,20 @@
 			<div class="service-block wrapper">
 				<nav class="catalog wrapper">
 					<a href="#" class="catalog-title">Каталог товаров</a>
-					<ul class="catalog-items">
-						<li><a href="#">Виртуальная реальность</a></li>
-						<li><a href="catalog.html">Моноподы для селфи</a></li>
-						<li><a href="#">Экшн&#x2010;камеры</a></li>
-						<li><a href="#">Фитнесс&#x2010;браслеты</a></li>
-						<li><a href="#">Умные часы</a></li>
-						<li><a href="#">Квадрокоптеры</a></li>
-					</ul>
+					<div class="catalog-items">
+						<ul>
+							<li><a href="#">Виртуальная реальность</a></li>
+							<li><a href="catalog.html">Моноподы для селфи</a></li>
+							<li><a href="#">Экшн&#x2010;камеры</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Фитнесс&#x2010;браслеты</a></li>
+							<li><a href="#">Умные часы</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Квадрокоптеры</a></li>
+						</ul>
+					</div>
 				</nav>
 
 				<ul class="service wrapper">
@@ -185,17 +191,21 @@
 
 
 	  <div class="service-slider">
-	  	<!-- переключатель слайдера -->
+	  	
 	  	<div class="container wrapper">
-	  		<input type="radio" id="btn-4" name="toggle" checked>
-	  		<input type="radio" id="btn-5" name="toggle">
-	  		<input type="radio" id="btn-6" name="toggle">
-	  		<label for="btn-4">Доставка</label>
-	  		<label for="btn-5">Гарантия</label>
-	  		<label for="btn-6">Кредит</label>
+	  	
+	  	<input type="radio" id="btn-4" name="toggle" checked>
+		  <input type="radio" id="btn-5" name="toggle" >
+		  <input type="radio" id="btn-6" name="toggle">
+	  	<!-- переключатель слайдера -->
+	  		<div class="slider-toggles">
+		  		<label for="btn-4">Доставка</label>
+		  		<label for="btn-5">Гарантия</label>
+		  		<label for="btn-6">Кредит</label>
+		  	</div>
 	  		<!--содержимое слайдера -->		
 	  		<div class="slider-inner">
-	  		<div class="slider-slides">
+		  		
 	  			<!--всем .service-item будут заданы соответствующие фоновые картинки -->
 	  			<section class="service-item">
 	  				<h2>Доставка</h2>
@@ -212,9 +222,9 @@
 	  				<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
 	  				</p>
 	  			</section>
-	  			</div>
 	  		</div>
 	  	</div>
+	  	
 	  </div>
 	  <!--конец слайдера -->
 

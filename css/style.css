@@ -107,7 +107,7 @@ ul {
 
 }
 
-.catalog.wrapper,
+
 .description.wrapper {
 flex-direction: column;
 }
@@ -128,19 +128,26 @@ margin-left: auto;
 }
 
 .catalog-items {
+	position: absolute;
+	top: 60px;
+	right: 0px;
+
 	display: none;
+	width: 1100px;
+	padding-bottom: 30px;
+	padding-left: 60px;
+	background-color: #ffe27f;
+}
+
+.catalog-items ul:first-child {
+	padding-right: 40px;
 }
 
 .catalog-items li{
 	width: 200px;
 }
 
-.catalog-items li:first-child {
-	padding-right: 40px;
-}
-.catalog-items li:nth-child(5) {
-	padding-bottom: 36px;
-}
+
 .catalog-items a {
 	font-family: "Open Sans";
 	font-weight: 300;
@@ -151,20 +158,9 @@ margin-left: auto;
 
 }
 .catalog:hover .catalog-items{
-	position: absolute;
-	top: 60px;
-	right: 0px;
-
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-content: flex-start;
-	width: 1100px;
-	height: 110px;
-	padding-bottom: 30px;
-	padding-left: 60px;
-
-	background-color: #ffe27f;
+	justify-content: flex-start;
+	
 }
 
 /*main*/
@@ -172,10 +168,6 @@ margin-left: auto;
 .promo-slider {
 	padding-top: 35px;
 	margin-bottom: 100px;
-}
-
-.promo-item {
-	height: 500px;
 }
 
 .promo-item img {
@@ -248,6 +240,7 @@ margin-left: auto;
  	
 
  }
+ /* эти все картинки ещё необходимо будет собрать в спрайт */
 
  .popular-item:nth-child(1) a {
 background-image: url("../img/virtual-reality.png");
@@ -277,6 +270,10 @@ background-image: url("../img/quadrocopter.png");
 	margin-bottom: 160px;
 }
 
+.service-slider input {
+	display: none;
+}
+
 .service-slider::after {
 	position: absolute;
 	top: 100px;
@@ -288,30 +285,18 @@ background-image: url("../img/quadrocopter.png");
 	background-color: #e6e6e6;
 }
 
-.slider-inner {
-	overflow: hidden;
+.slider-toggles {
+	width: 277px;
+	padding-top: 80px;
+	padding-bottom: 45px;
+	border-right: 7px solid black;
 }
 
-.slider-slides {
-	height: 300%;
-	
-}
-
-.container.wrapper {
-	flex-direction: column;
-	flex-wrap: wrap;
-	height: 320px;
-	overflow: hidden;
-
-}
-.service-slider input {
-	display: none;
-}
-
-
-.service-slider label {
+.slider-toggles label {
+	display: block;
 	width: 160px;
 	padding-top: 10px;
+	padding-right: 117px;
 	padding-bottom: 10px;
 	margin-bottom: 25px;
 	text-align: center;
@@ -320,18 +305,32 @@ background-image: url("../img/quadrocopter.png");
 	
 }
 
-.service-slider label:first-of-type {
-	margin-top: 80px;
+/*меньшая вложенность здесь не получается*/
+
+#btn-4:checked ~ .slider-toggles label[for="btn-4"],
+#btn-5:checked ~ .slider-toggles label[for="btn-5"],
+#btn-6:checked ~ .slider-toggles label[for="btn-6"] {
+	color: #ffe27f;
+	background-color: #000000;
 }
 
-.service-item {
-	height: 250px;
+ .service-item {
+	display: none;
 	width: 760px;
 	padding-left: 116px;
 	padding-top: 70px;
-	border-left: 7px solid black;
 	
 }
+
+/*меньшая вложенность здесь не получается*/
+
+#btn-4:checked ~ .slider-inner .service-item:nth-child(1),
+#btn-5:checked ~  .slider-inner .service-item:nth-child(2),
+#btn-6:checked ~ .slider-inner .service-item:nth-child(3) {
+ display: block;
+}
+
+
 
 .service-item p {
 	width: 435px;
@@ -369,7 +368,7 @@ margin-bottom: 80px;
 	.write-us {
 		width: 760px;
 		padding: 95px 100px 85px 100px;
-		
+
 	}
 
 	form.wrapper {
@@ -381,6 +380,11 @@ margin-bottom: 80px;
 .write-us input,
 .write-us textarea {
 	display: block;
+}
+
+.write-us label {
+	line-height: 18px;
+	letter-spacing: 0;
 }
 
 	input[name="name"],
@@ -522,11 +526,16 @@ margin-bottom: 80px;
 	margin-left: auto;
 }
 
+/* вот здесь не очень красивый момент: высота блоков .filters h2
+ и .container-sort h2 может измениться, но эти блоки должны 
+ находиться над определенным цветом, а "высота" цвета у нас фиксированная */
+
  .filters h2,
  .container-sort h2 {
- 	height: 70px;
+ 	padding-top: 25px;
+ 	padding-bottom: 25px;
  	font-size: 16px;
- 	line-height: 70px;
+ 	line-height: 1.2em;
  	letter-spacing: 0.2em;
  	text-transform: uppercase;
  }
