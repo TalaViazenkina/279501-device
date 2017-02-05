@@ -21,10 +21,10 @@
 				</form>
 
 				<ul class="personal wrapper">
-					<li><a class="user-name" href="#">Валентин Петухов</a></li>
-					<li><a href="#">Выйти</a></li>
-					<li><a href="#">Сравнить</a></li>
-					<li><a href="#">Корзина</a></li>
+					<li><a class="user" href="#">Валентин Петухов</a></li>
+					<li><a class= "exit" href="#">Выйти</a></li>
+					<li><a class="compare" href="#">Сравнить</a></li>
+					<li><a class="basket"  href="#">Корзина</a></li>
 				</ul>
 			</div>
 
@@ -87,38 +87,30 @@
 
 					<div class="filters-color">
 						<h3>Цвет</h3>
-						<label>
-							<input type="checkbox" name="black" checked>
-							Черный
-						</label>
-						<label>
-							<input type="checkbox" name="white">
-							Белый
-						</label>
-						<label>
-							<input type="checkbox" name="blue" checked>
-							Синий
-						</label>
-						<label>
-							<input type="checkbox" name="red" checked>
-							Красный
-						</label>
-						<label>
-							<input type="checkbox" name="pink">
-							Розовый
-						</label>
+							<input id="black" type="checkbox" name="black" checked>
+							<label for="black">Черный</label>
+						
+							<input id="white" type="checkbox" name="white">
+							<label for="white">Белый</label>
+						
+							<input id="blue" type="checkbox" name="blue" checked>
+							<label for="blue">Синий</label>
+						
+							<input id="red" type="checkbox" name="red" checked>
+							<label for="red">Красный </label>
+						
+							<input id="pink" type="checkbox" name="pink">
+							<label for="pink">Розовый</label>
 					</div>
 
 					<div class="filters-bluetooth">
 						<h3>Bluetooth</h3>
-						<label>
-							<input type="radio" name="bluetooth" value="yes" checked>
-							Есть
-						</label>
-						<label>
-							<input type="radio" name="bluetooth" value="not">
-							Нет
-						</label>
+						
+							<input id="yes" type="radio" name="bluetooth" value="yes" checked>
+							<label for="yes">Есть</label>
+						
+							<input id="not" type="radio" name="bluetooth" value="not">
+							<label for="not">Нет</label>
 					</div>
 
 					<button type="submit">Показать</button>
@@ -248,19 +240,21 @@
 
 	<footer class="main-footer">
 		<div class="container">
-				<ul class="user-block wrapper">
-					<li class="footer-logo"><a href="index.html">Device</a></li>
-					<li><a href="#">Выйти</a></li>
-					<li><a href="#">Сравнить</a></li>
-					<li><a href="#">Корзина</a></li>
+			<div class="user-block wrapper">
+				<a class="footer-logo" href="index.html">Device</a>
+				<ul class="footer-personal wrapper">
+					<li><a class="footer-user" href="#">Выйти</a></li>
+					<li><a class="footer-compare" href="#">Сравнить</a></li>
+					<li><a  class="footer-basket" href="#">Корзина</a></li>
 				</ul>
+			</div>
 			
 
 			<div class="service-block wrapper">
 				<div class="address">г.Москва, ул. Строителей, 15 
 				</div>
 
-				<ul class="service wrapper">
+				<ul class="footer-service wrapper">
 					<li><a href="#">Доставка</a></li>
 					<li><a href="#">Гарантия</a></li>
 					<li><a href="#">Контакты</a></li>
@@ -272,9 +266,9 @@
 
 			<div class="links wrapper">
 				<div class="social">
-					<a href="#">facebook</a>
-					<a href="#">instagram</a>
-					<a href="#">twitter</a>
+					<a class="btn-fb" href="#">facebook</a>
+					<a class="btn-inst" href="#">instagram</a>
+					<a class="btn-tw" href="#">twitter</a>
 				</div>
 				<div class="copyright">
 					<a href="https://htmlacademy.ru">HTMLAcademy.ru</a>
