@@ -14,12 +14,11 @@
 				Device
 			</div>
 			<div class="user-block wrapper">
-				<form class="search" action="https://echo.htmlacademy.ru" method="post">
+				<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
 					<!--добавила label, чтобы навесить на label картинку с лупой в качестве background-image + за счет этого картинка станет "функциональной"  -->
-					<label>
-						<input type="search" name="search" placeholder="Поиск по сайту">
-					</label>
-					<input type="submit" value="Найти">
+					<input class="search" type="search" name="search" placeholder="Поиск по сайту">
+					
+					<button class="btn" type="submit">Найти</button>
 				</form>
 
 				<ul class="personal wrapper">
@@ -156,32 +155,32 @@
       для а задаем нужную нам фоновую картинку, абсолютно позиционируем, так чтобы картинка расположилась над оранжевым фоном .bg, 
       и задаем изменение  opacity при  a:active-->
 	      <div class="popular-item">
-	      	<a href="#">
+	      	<a class="virtual-reality" href="#">
 	      		Виртуальная реальность
 	      	</a>
 	      </div>
 	      <div class="popular-item">
-	      	<a href="catalog.html">
+	      	<a class="monopod" href="catalog.html">
 	      		Моноподы для селфи
 	      	</a>
 	      </div>
 	      <div class="popular-item">
-	      	<a  href="#">
+	      	<a class="action-camera" href="#">
 	      		Экшн&#x2010;камеры
 	      	</a>
 	      </div>
 	      <div class="popular-item">
-	      	<a href="#">
+	      	<a class="fitness-bracelets" href="#">
 	      		Фитнесс&#x2010;браслеты
 	      	</a>
 	      </div>
 	      <div class="popular-item">
-	      	<a href="#">
+	      	<a class="smart-watch" href="#">
 	      		Умные часы
 	      	</a>
 	      </div>
 	      <div class="popular-item">
-	      	<a href="#">
+	      	<a class="quadrocopter" href="#">
 	      		Квадрокоптеры
 	      	</a>
 	      </div>
@@ -206,17 +205,17 @@
 	  		<div class="slider-inner">
 		  		
 	  			<!--всем .service-item будут заданы соответствующие фоновые картинки -->
-	  			<section class="service-item">
+	  			<section class="service-item delivery">
 	  				<h2>Доставка</h2>
 	  				<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
 	  				</p>
 	  			</section>
-	  			<section class="service-item">
+	  			<section class="service-item warranty">
 	  				<h2>Гарантия</h2>
 	  				<p>Если из&#x2010;за возгарания купленного у нас товара у вас сгорит дом &mdash; не переживайте, мы выдадим вам новый.Товар, не дом, конечно же.
 	  				</p>
 	  			</section>
-	  			<section class="service-item">
+	  			<section class="service-item credit">
 	  				<h2>Кредит</h2>
 	  				<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
 	  				</p>
@@ -229,19 +228,11 @@
 
 	  <div class="container">
 	  	<div class="logotypes wrapper">
-	  		<!--по наведению картинка будет меняться на цветную (имя файла вместо -logo  заканчивается на -hover) -->
-	  		<a href="#">
-	  			<img src="img/dji-logo.png" width="260" height="100" alt="Dji">
-	  		</a>
-	  		<a href="#">
-	  			<img src="img/gadgets-logo.png" width="260" height="100" alt="SP Gadgets">
-	  		</a>
-	  		<a href="#">
-	  			<img src="img/gopro-logo.png" width="260" height="100" alt="GoPro">
-	  		</a>
-	  		<a href="#">
-	  			<img src="img/vive-logo.png" width="260" height="100" alt="Vive">
-	  		</a>
+	  		<!--здесь для реализации эффекта изменения яркости картинки при наведении пришлось сделать картинку фоновой  -->
+	  		<a class="dji" href="#">Dji</a>
+	  		<a class="gadgets" href="#">SP Gadgets</a>
+	  		<a class="gopro" href="#">GoPro</a>
+	  		<a class="vive" href="#">Vive</a>
 	  	</div>
 
 	  	<div class="info wrapper">
