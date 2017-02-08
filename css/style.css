@@ -121,26 +121,13 @@ img {
 }
 
 .search-form{
-	position: relative;
+	
 	flex-basis: 440px;
 	font-size: 0;
 
 }
 
 
-.search-form::before {
-	position: absolute;
-	left: 3px;
-	top: 10px;
-	content: "";
-	display: block;
-	width: 16px;
-	height: 16px;
-	background-image: url("../img/icons/icons-sprite.png");
-	background-repeat: no-repeat; 
-	background-position: -10px -452px;
-
-}
 
 /* Осталась стилизация плейсхолдера*/
 
@@ -155,6 +142,9 @@ img {
 	color: #000000;
 	border: none;
 	background-color: transparent;
+	background-image: url("../img/icons/icons-sprite.png");
+	background-repeat: no-repeat; 
+	background-position: -10px -440px;
 }
 
 .search-form .btn {
@@ -319,6 +309,7 @@ img {
 
 .catalog-items {
 	position: absolute;
+	z-index: 1;
 	top: 60px;
 	right: 0px;
 
@@ -389,10 +380,68 @@ margin-left: auto;
 /*main*/
 
 .promo-slider {
-	padding-top: 35px;
+	position: relative;
+	padding-top: 25px;
 	margin-bottom: 100px;
 }
 
+
+.promo-slider::before {
+	position: absolute;
+	top: 25px;
+	left: 0;
+	z-index: -1;
+	content: "";
+	display: block;
+	width: 1160px;
+	height: 113px;
+	background-color: #ffe27f;
+
+
+}
+.promo-slider input {
+	display: none;
+}
+
+.promo-controls {
+	position: absolute;
+	z-index: 2;
+	right: 84px;
+	top: 360px;
+	font-size: 0;
+}
+
+.promo-controls label {
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	margin-left: 23px;
+	border-radius: 50%;
+	border: 3px solid rgba(0, 0, 0, 0.3);
+	vertical-align: top;
+
+}
+
+.promo-controls label:hover {
+	border-color: rgba(0, 0, 0, 0.4);
+}
+
+#btn-1:checked ~ .promo-controls label[for="btn-1"],
+#btn-2:checked ~ .promo-controls label[for="btn-2"],
+#btn-3:checked ~ .promo-controls label[for="btn-3"] {
+	border-color: #000000;
+}
+
+
+.slider-inner .promo-item {
+	display: none;
+}
+
+#btn-1:checked ~ .slider-inner .promo-item:nth-child(1),
+#btn-2:checked ~ .slider-inner .promo-item:nth-child(2),
+#btn-3:checked ~ .slider-inner .promo-item:nth-child(3) {
+	display: flex;
+}
 
 .promo-item img {
 	width: 560px;
@@ -411,13 +460,57 @@ margin-left: auto;
 
 }
  .description h2 {
- 	margin: 85px 0 0 0;
+ 	margin: 82px 0 0 0;
+ 	width: 392px;
  	font-size: 47px;
 	line-height: 1.2em;
  	font-weight: 800;
  	 }
 
+ 	  .promo-item:nth-child(3) h2{
+ 	 	width: 500px;
+ 	 }
+
+ 	.description h2::before {
+ 		position:absolute;
+ 		right: 460px;
+ 		top: 67px;
+ 		content: "";
+ 		display: block;
+ 		width: 100px;
+ 		height: 7px;
+ 		background-color: #ffffff;
+
+ 	}
+
+ 	.description h2::after {
+ 		z-index: -1;
+ 		position:absolute;
+ 		top: 16px;
+ 		right: 47px;
+ 		content: "01";
+ 		display: block;
+ 		font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 800;
+	font-size: 179px;
+	line-height: 179px;
+	letter-spacing: 0.01em;
+ 		color: #ffffff;
+ 	}
+
+.promo-item:nth-child(2) h2::after {
+	content: "02";
+}
+
+.promo-item:nth-child(3) h2::after {
+	content: "03";
+}
+
+
+ 	
+
  .description p {
+ 	margin: 20px 0 45px 0;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
@@ -429,8 +522,8 @@ margin-left: auto;
  	position: relative;
  	display: block;
  	width: 220px;
- 	padding-top: 11px;	
- 	padding-bottom: 11px;
+ 	padding-top: 10px;	
+ 	padding-bottom: 10px;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	text-align: center;
@@ -460,7 +553,7 @@ margin-left: auto;
 
  .promo-property {
  	list-style: none;
- 	margin: 0;
+ 	margin: auto 0 0 0;
  	padding: 0;
  }
  
@@ -518,7 +611,7 @@ margin-left: auto;
  	
 
  }
- /* эти все картинки ещё необходимо будет собрать в спрайт */
+ 
 
 .popular-item .virtual-reality {
 	 background-position: -822px -2px;
@@ -740,7 +833,9 @@ margin-left: auto;
 	margin-bottom: 80px;
 }
 
-.info  section {
+.info  .wrapper {
+	position: relative;
+	flex-direction: column;
 	width: 560px;
 	
 }
@@ -749,13 +844,28 @@ margin-left: auto;
 	font-size: 47px;
 	line-height: 1.2em;
 	font-weight: 800;
+	padding-top: 10px;
 }
 
+
+.info h2::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 80px;
+	height: 7px;
+	background-color: #000000;
+
+}
 .info p {
+	margin: 0 0 30px 0;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
+	letter-spacing: 0;
 	color: #444444;
 }
 
@@ -764,6 +874,12 @@ margin-left: auto;
 	text-transform: uppercase;
 	
 }
+.about-us, 
+.contacts {
+	position: relative;
+}
+
+
 
  .about-us p {
 	width: 475px;
@@ -774,8 +890,9 @@ margin-left: auto;
  	position: relative;
  	display: block;
  	width: 260px;
- 	padding-top: 11px;	
- 	padding-bottom: 11px;
+ 	padding-top: 10px;	
+ 	padding-bottom: 10px;
+ 	margin-top: 55px;
 	text-align: center;
 
  }
@@ -803,8 +920,9 @@ margin-left: auto;
  	position: relative;
  	display: block;
  	width: 260px;
- 	padding-top: 11px;	
- 	padding-bottom: 11px;
+ 	padding-top: 10px;	
+ 	padding-bottom: 10px;
+ 	margin-top: 65px;
 	text-align: center;
 
  }
@@ -830,7 +948,7 @@ margin-left: auto;
 
 
 .logistics {
-	margin: 0;
+	margin: auto 0 0 0;
 	padding: 0;
 	font-size: 16px;
 	line-height: 40px;
@@ -857,43 +975,6 @@ margin-left: auto;
 
 
 
-
-.write-form {
-	width: 760px;
-	padding: 95px 100px 85px 100px;
-
-	}
-
-form.wrapper {
-		flex-wrap: wrap;
-	}
-
-
-.wtite-form label,
-.write-form input,
-.write-form textarea {
-	display: block;
-}
-
-.write-form label {
-	line-height: 18px;
-	letter-spacing: 0;
-}
-
-input[name="name"],
-input[name="email"] {
-	width: 360px;
-	margin-top: 8px;
-	margin-bottom: 35px;
-}
-
-.write-form textarea {
-	width: 760px;
-	height: 156px;
-	margin-top: 8px;
-	margin-bottom: 50px;
-
-}
 
 
 
@@ -1056,7 +1137,7 @@ a.footer-logo{
 	margin: 0 7px;
 	font-size: 0;
 	vertical-align: top;
-	background-image: url("../img/icons/icons-sprite.png.png");
+	background-image: url("../img/icons/icons-sprite.png");
   background-repeat: no-repeat; 
   opacity: 0.3;
 
@@ -1101,7 +1182,7 @@ a.footer-logo{
 	height: 40px;
 	font-size: 0;
 	vertical-align: top;
-	background-image: url("../img/icons/icons-sprite.png.png");
+	background-image: url("../img/icons/icons-sprite.png");
   background-repeat: no-repeat; 
   background-position: -10px -286px;
 
@@ -1115,6 +1196,218 @@ a.footer-logo{
 	background-position: -10px -340px;
 	opacity: 0.3;
 }
+
+/*модальное окно - форма обратной связи*/
+
+.modal-content {
+	display: none;
+	position: fixed;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%);
+	width: 760px;
+	padding: 95px 100px 78px 100px;
+	margin-left: -480px;
+	background-color: #ffffff;
+	box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.15);
+
+	}
+
+	.modal-content::before {
+		position: absolute;
+		top: 45px;
+		left: 0;
+		z-index: -2;
+		content: "";
+		display: block;
+		width: 960px;
+		height: 430px;
+		box-shadow: 0 15px 30px 12px rgba(0, 0, 0, 0.35);
+	}
+
+	.modal-content::after {
+		position: absolute;
+		z-index: -2;
+		top: 0;
+		left: 0;
+		content: "";
+		display: block;
+		width: 960px;
+		height: 553px;
+		background-color: #ffffff;
+	}
+
+	.modal-content-close {
+		position: absolute;
+		top: 22px;
+		right: 22px; 
+	width: 54px;
+  height: 54px;
+
+  font-size: 0;
+
+  background-color: rgba(255, 198, 0, 0.5);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+	}
+
+	.modal-content-close:hover {
+		background-color: #ffc600;
+	}
+
+	.modal-content-close:active {
+		outline: none;
+	}
+
+.modal-content-close::before,
+.modal-content-close::after {
+	position: absolute;
+	top: 26px;
+	right: 10px;
+	content: "";
+	display: block;
+	width: 34px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: #ffffff;
+	transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+	transform: rotate(-45deg);
+}
+
+.modal-content-close:active::before,
+.modal-content-close:active::after {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+form.wrapper {
+		flex-wrap: wrap;
+	}
+
+
+.modal-content label,
+.modal-content input,
+.modal-content textarea {
+	display: block;
+}
+
+.modal-content label {
+	line-height: 18px;
+	letter-spacing: 0;
+}
+
+input[name="name"],
+input[name="email"] {
+	width: 314px;
+	padding: 13px 20px;
+	margin-top: 8px;
+	margin-bottom: 35px;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	color: #000000;
+	background-color: #f2f2f2;
+	border: 3px solid #f2f2f2;
+}
+
+
+
+.modal-content textarea {
+	width: 714px;
+	height: 110px;
+	padding: 20px;
+	margin-top: 8px;
+	margin-bottom: 40px;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	color: #000000;
+	background-color: #f2f2f2;
+	border: 3px solid #f2f2f2;
+}
+
+input[name="name"]:hover,
+input[name="email"]:hover,
+.modal-content textarea:hover {
+	background-color: #ebebeb;
+	border-color: #ebebeb;
+} 
+
+input[name="name"]:focus,
+input[name="email"]:focus,
+.modal-content textarea:focus {
+	background-color: #ffffff;
+	border-color: #e5e5e5;
+	outline: none;
+} 
+
+
+input[name="email"]:invalid {
+	background-color: #ffdada;
+	border-color: #ffdada;
+}
+
+.modal-content .send {
+	position: relative;
+ 	display: block;
+ 	width: 200px;
+ 	padding: 10px 0;	
+ 	margin: 0;
+ 	font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 1.2em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	text-align: center;
+	border:none;
+	background-color: transparent;
+	
+
+}
+
+ .modal-content .send::before {
+ 	position: absolute;
+ 	z-index: -1;
+ 	top: 17px;
+ 	content: "";
+ 	display: block;
+ 	width: 200px;
+ 	height: 8px;
+ 	background-color: #ffc600;
+ }
+
+.modal-content .send:hover {
+ 	background-color: #ffc600;
+ }
+
+.modal-content .send:active {
+ 	color: rgba(0, 0, 0, 0.3);
+ 	outline: none;
+ }
+
+/*модальное окно - карта*/
+
+.modal-content-map {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -480px;
+	margin-top: -280px;
+	width: 960px;
+	height: 559px;
+	background: #ffffff url("../img/map-big.jpg");
+	box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.15);
+}
+
 
 
 /*каталог*/
@@ -1254,7 +1547,7 @@ a.footer-logo{
 	display: none;
 	width: 12px;
 	height: 7px;
-	background-image: url("../img/icons/icons-sprite.png.png");
+	background-image: url("../img/icons/icons-sprite.png");
 	background-repeat: no-repeat; 
 	background-position: -10px -488px;
 }
@@ -1308,21 +1601,30 @@ a.footer-logo{
 
 .filters-form button {
 	position: relative;
+	z-index: 1;
+	border: none;
+	background-color: transparent;
+}
+
+.filters-form a {
+	position: relative;
  	display: block;
  	width: 200px;
- 	padding: 11px 0;	
+ 	padding: 10px 0;	
  	margin: 0;
+ 	font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 1.2em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
 	text-align: center;
 	border:none;
-	background-color: transparent;
+	
 
 }
 
-/*здесь тоже проблема: при заданном z-index:-1;  псевдоэлемент "проваливается" ниже ниже слоя с бэкграундом
-(это aside, у которого position:static; и который в играх с z-index учавствовать не должен
-Решение: как вариант, само слово "Показать" повесить на ::after ) */
-
- .filters-form button::before {
+ .filters-form a::before {
  	position: absolute;
  	z-index: -1;
  	top: 17px;
@@ -1333,11 +1635,11 @@ a.footer-logo{
  	background-color: #ffc600;
  }
 
- .filters-form button:hover {
+ .filters-form a:hover {
  	background-color: #ffc600;
  }
 
- .filters-form button:active {
+ .filters-form a:active {
  	color: rgba(0, 0, 0, 0.3);
  }
 
