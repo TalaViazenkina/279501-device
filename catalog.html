@@ -34,8 +34,7 @@
 					<div class="catalog-items">
 						<ul>
 							<li><a href="#">Виртуальная реальность</a></li>
-							<li><a href="
-							">Моноподы для селфи</a></li>
+							<li><a>Моноподы для селфи</a></li>
 							<li><a href="#">Экшн&#x2010;камеры</a></li>
 						</ul>
 						<ul>
@@ -80,9 +79,23 @@
 				<form class="filters-form" action="https://echo.htmlacademy.ru" method="get" oninput="maxcost.value=slider.value">
 					<div class="filters-cost">
 						<h3>Стоимость</h3>
-						<input id="slider" type="range" name="slider" min="0" max="8500" step="100" value="5000">
+						<!--<input id="slider" type="range" name="slider" min="0" max="8500" step="100" value="5000">
 						<span>от 0</span> <span>до</span>
-						<output id="maxcost" name="cost">5000</output>
+						<output id="maxcost" name="cost">5000</output>-->
+
+						<div class="range-controls">
+							<div class="scale">
+            		<div class="bar"></div>
+            	</div>
+            	<div class="toggle toggle-min"></div>
+          		<div class="toggle toggle-max"></div>
+          	</div>
+        	
+        		<div class="price-controls">
+        			<label class="min-price">от <input name="min-price" type="text" value="0"></label>
+          		<label class="max-price">до <input name="max-price" type="text" value="5000"></label>
+        		</div>
+
 					</div>
 
 					<div class="filters-color">
@@ -113,7 +126,7 @@
 							<label for="not">Нет</label>
 					</div>
 						<!-- по ТЗ "4.5 Фильтр: при выключенном JavaScript кнопка «Показать» должна осуществлять переход на отдельную страницу" поэтому добавила во внутрь кнопки ссылку -->
-					<button type="submit"><a href="#">Показать</a></button>
+					<button type="submit">Показать</button>
 				</form>
 				
 			</aside>
@@ -122,7 +135,7 @@
 				<div class="container-sort wrapper">
 					<h2>Сортировка:</h2>
 					<ul class="products-sort">
-						<li><a href="#">По цене</a></li>
+						<li><a class="current" href="#">По цене</a></li>
 						<li><a href="#">По типу</a></li>
 						<li><a href="#">По популярности</a></li>
 					</ul>
@@ -132,7 +145,7 @@
 							<a href="#"></a>
 						</li>
 						<li class="arrow-down">
-							<a href="#"></a>
+							<a class="current" href="#"></a>
 						</li>
 					</ul>
 				</div>
@@ -145,6 +158,10 @@
 						<div class="products-picture">
 							<!--Значок NEW будет сделан как пседоэлемент .products-picture::before -->
 							<img src="img/selfie-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
+							<div class="products-purshase wrapper">
+								<a class="basket" href="#">В корзину</a>
+								<a class="compare" href="#">Добавить к сравнению</a>
+							</div>
 						</div>
 						<div class="name-and-price wrapper">
 							<h1>
@@ -153,15 +170,16 @@
 							<span>500 руб.</span>
 						</div>
 						
-						<div class="products-purshase">
-							<a href="#">В корзину</a>
-							<a href="#">Добавить к сравнению</a>
-						</div>
+						
 					</article>
 
 					<article class="products-item">
 						<div class="products-picture">
 							<img src="img/selfie-professional.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+							<div class="products-purshase wrapper">
+									<a class="basket" href="#">В корзину</a>
+									<a class="compare" href="#">Добавить к сравнению</a>
+							</div>
 						</div>
 
 						<div class="name-and-price wrapper">
@@ -170,16 +188,16 @@
 							</h1>
 							<span>1500 руб.</span>
 						</div>
-
-						<div class="products-purshase">
-							<a href="#">В корзину</a>
-							<a href="#">Добавить к сравнению</a>
-						</div>
 					</article>
 
 					<article class="products-item">
 						<div class="products-picture">
 							<img src="img/selfie-insubmersible.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+							<div class="products-purshase wrapper">
+									<a class="basket" href="#">В корзину</a>
+									<a class="compare" href="#">Добавить к сравнению</a>
+							</div>
+
 						</div>
 
 						<div class="name-and-price wrapper">
@@ -188,16 +206,16 @@
 							</h1>
 							<span>2500 руб.</span>
 						</div>
-
-						<div class="products-purshase">
-							<a href="#">В корзину</a>
-							<a href="#">Добавить к сравнению</a>
-						</div>
+						
 					</article>
 
 					<article class="products-item">
 						<div class="products-picture">
 							<img src="img/selfie-hand.jpg" width="360" height="380" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
+							<div class="products-purshase wrapper">
+								<a class="basket" href="#">В корзину</a>
+								<a class="compare" href="#">Добавить к сравнению</a>
+							</div>
 						</div>
 
 						<div class="name-and-price wrapper">
@@ -207,16 +225,13 @@
 							<span>4900 руб.</span>
 						</div>
 
-						<div class="products-purshase">
-							<a href="#">В корзину</a>
-							<a href="#">Добавить к сравнению</a>
-						</div>
+						
 					</article>
 				</div>
 
 				<ul class="products-paginator wrapper">
 					<li>
-						<a href="#">Назад</a>
+						<a class="previous" href="#">Назад</a>
 					</li>
 					<li>
 						<a class="current" href="#">1</a>
@@ -228,7 +243,7 @@
 						<a href="#">3</a>
 					</li>
 					<li>
-						<a href="#">Вперед</a>
+						<a class="next" href="#">Вперед</a>
 					</li>
 				</ul>
 

@@ -1432,14 +1432,14 @@ input[name="email"]:invalid {
 
 .breadcrumbs li{
 	display: inline-block;
-	padding-right: 40px;
+	padding-right: 22px;
 
 }
 
 .breadcrumbs a {
+	position: relative;
 	display: block;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-right: 15px;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 14px;
@@ -1454,8 +1454,21 @@ input[name="email"]:invalid {
 	color: rgba(0, 0, 0, 0.6);
 }
 
-.breadcrumbs a:not(current):active {
+.breadcrumbs a:not(.current):active {
 	color: rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumbs a:not(.current)::after {
+	position: absolute;
+	top: 15px;
+	right: -7px;
+	content: "";
+	display: block;
+	width: 4px;
+	height: 4px;
+	border-top: 2px solid #000000;
+	border-right: 2px solid #000000;
+	transform: rotate(45deg);
 }
 
 .filters.wrapper,
@@ -1466,18 +1479,23 @@ input[name="email"]:invalid {
 
 }
 .filters {
-	background-image: linear-gradient(to bottom,#dcdcdc 70px, #efefef 70px)
+	background-image: linear-gradient(to bottom,#dcdcdc 70px, #efefef 70px);
 }
 
 .filters h2,
-.filters form {
-	width: 270px;
+.filters-form {
+	width: 200px;
 	padding-left: 60px;
+	padding-right: 70px;
 	margin-top: 0;
 	margin-right: 0;
 	margin-bottom: 0;
 	margin-left: auto;
 
+}
+
+.filters-form {
+	padding-top: 40px;
 }
 
 /* вот здесь не очень красивый момент: высота блоков .filters h2
@@ -1507,7 +1525,6 @@ input[name="email"]:invalid {
  	}
 
 .filters label {
-	display: block;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 14px;
@@ -1515,12 +1532,89 @@ input[name="email"]:invalid {
 	letter-spacing: 0.01em;
 }
 
+.filters-form > div {
+	margin-top: 30px;
+	border-top: 2px solid #000000;
+}
+
+/* фильтр цены*/
+
+.range-controls {
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #dcdcdc;
+}
+
+.range-controls .bar {
+  width: 55%;
+  height: 2px;
+  background: #72ca00;
+}
+
+.range-controls .toggle {
+	position: absolute;
+  top: 14px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background-color: #efefef;
+}
+
+.range-controls .toggle-max {
+  left: 103px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.range-controls .toggle:active {
+	background-color: #63b000;
+	border: 3px solid #ffffff; 
+	box-shadow: 0 4px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 90px;
+  font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 22.27px;
+	letter-spacing: 0;
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.price-controls input {
+ width: 60px;
+ font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 22.27px;
+	letter-spacing: 0;
+	color: rgba(0, 0, 0, 0.2);
+ border: none;
+ background-color: transparent;
+}
+
+
+
+
 .filters-color input {
 	display: none;
 }
 
 .filters-color label {
 	position: relative;
+	display: block;
 	padding-left: 40px;
 }
 
@@ -1562,6 +1656,7 @@ input[name="email"]:invalid {
 
 .filters-bluetooth label {
 	position: relative;
+	display: block;
 	padding-left: 40px;
 }
 
@@ -1602,12 +1697,6 @@ input[name="email"]:invalid {
 .filters-form button {
 	position: relative;
 	z-index: 1;
-	border: none;
-	background-color: transparent;
-}
-
-.filters-form a {
-	position: relative;
  	display: block;
  	width: 200px;
  	padding: 10px 0;	
@@ -1620,11 +1709,12 @@ input[name="email"]:invalid {
 	text-transform: uppercase;
 	text-align: center;
 	border:none;
+	background-color: transparent;
 	
 
 }
 
- .filters-form a::before {
+ .filters-form button::before {
  	position: absolute;
  	z-index: -1;
  	top: 17px;
@@ -1635,16 +1725,16 @@ input[name="email"]:invalid {
  	background-color: #ffc600;
  }
 
- .filters-form a:hover {
+ .filters-form button:hover {
  	background-color: #ffc600;
  }
 
- .filters-form a:active {
+ .filters-form button:active {
  	color: rgba(0, 0, 0, 0.3);
  }
 
  .results {
- 	background-image: linear-gradient(to bottom, #ebebeb 70px, transparent 70px)
+ 	background-image: linear-gradient(to bottom, #ebebeb 70px, transparent 70px);
  }
 
  .container-sort,
@@ -1663,7 +1753,7 @@ input[name="email"]:invalid {
  }
 
 .container-sort h2{
-	margin: 0;
+	margin: 0 35px 0 0;
 	font-weight: 800;
 }
 
@@ -1682,7 +1772,78 @@ input[name="email"]:invalid {
  	font-weight: normal;
  	font-size: 14px;
  	line-height: 18px;
+ 	letter-spacing: 0;
   }
+
+  ul.products-sort {
+  	margin-right: auto;
+  }
+
+  .products-sort li {
+  	margin-right: 5px;
+  	margin-left: 5px;
+  }
+
+.products-sort a {
+	padding: 10px;
+	opacity: 0.3;
+}
+
+.products-sort a:hover {
+	opacity: 0.6;
+}
+
+.products-sort a:active,
+.products-sort .current {
+	opacity: 1;
+}
+
+
+/* стрелки сортировки "вверх-вниз"*/
+
+.arrows a{
+	display: block;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	opacity: 0.2;
+}  
+
+.arrows a:hover {
+	opacity: 0.4;
+}
+
+.arrows a:active,
+.arrows .current {
+	opacity: 1;
+}
+
+
+.arrows a::before {
+	position: absolute;
+	top: 11px;
+	content: "";
+	width: 0;
+	height: 0;
+	border: 9px solid #000000;
+}
+
+  .arrow-top a::before {
+  	left: 0;
+  border-top-width: 0;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.arrow-down a::before {
+	right: 0;
+	border-bottom-width: 0;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+
+
 
 .products.wrapper {
 	flex-wrap: wrap;
@@ -1690,12 +1851,39 @@ input[name="email"]:invalid {
 
 }
 .products-item {
+	position:relative;
 	width: 360px;
 	margin-top: 10px;
 	margin-bottom: 40px;
 
 	
 }
+
+
+.products-picture::before {
+	position: absolute;
+	top: 29px;
+	right: 27px;
+	content: "new";
+	display: none;
+	width: 56px;
+	height: 56px;
+	font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 56px;
+	letter-spacing: 0.05;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.2);
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%
+}
+
+.products-item:last-child .products-picture::before {
+	display: block;
+}
+
 
 .products-item:nth-child(odd){
 	margin-right: 40px;
@@ -1722,17 +1910,93 @@ input[name="email"]:invalid {
 	line-height: 1.2em;
 }
 
-.products-item .products-purshase{
+.products-purshase.wrapper{
 	display: none;
 }
 
+ .products-picture:hover  .products-purshase.wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 360px;
+	height: 380px;
+	cursor: pointer;
+	background-color: rgba(239, 239, 239, 0.7);
+}
+
+.products-purshase a {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.products-purshase .basket {
+	position: relative;
+ 	display: block;
+ 	width: 200px;
+ 	padding: 10px 0;	
+ 	margin-top: auto;
+ 	font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 1.2em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	text-align: center;
+	
+}
+
+ .products-purshase .basket::before {
+ 	position: absolute;
+ 	z-index: -1;
+ 	top: 17px;
+ 	content: "";
+ 	display: block;
+ 	width: 200px;
+ 	height: 8px;
+ 	background-color: #ffc600;
+ }
+
+ .products-purshase .basket:hover {
+ 	background-color: #ffc600;
+ }
+
+ .products-purshase .basket:active {
+ 	color: rgba(0, 0, 0, 0.3);
+ }
+
+ .products-purshase .compare {
+ 	margin-top: 0;
+ 	margin-bottom: 120px;
+ 	padding: 10px 0;
+ 	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 36px;
+	letter-spacing: 0.01em;
+	color: rgba(0, 0, 0, 0.5);
+ }
+
+
+.products-purshase .compare:hover {
+	color: #000000;
+}
+
+.products-purshase .compare:active {
+	color: rgba(0, 0, 0, 0.2);
+}
+
+
 .products-paginator {
-	width: 730px;
-	padding: 15px;
+	width: 760px;
 	margin-top: 0;
 	margin-bottom: 75px;
 	margin-right: auto;
 	margin-left: 70px;
+	padding: 0;
 	background-color: #ebebeb;
 	list-style: none;
 	
@@ -1749,6 +2013,38 @@ input[name="email"]:invalid {
 .products-paginator a {
 	display: block;
 	padding: 10px;
+	line-height: 50px;
 	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.3);
 }
 
+.products-paginator a:hover {
+ color: rgba(0, 0, 0, 0.6);
+}
+
+.products-paginator a:active,
+.products-paginator .current {
+ color: rgba(0, 0, 0, 1);
+}
+
+.products-paginator .previous,
+.products-paginator .next {
+	padding-left: 30px;
+	padding-right: 25px;
+	height: 50px;
+	color: #000000;
+
+}
+
+.products-paginator .previous:hover,
+.products-paginator .next:hover {
+ background-color: rgba(0, 0, 0, 0.08);
+ color: #000000;
+}
+
+.products-paginator .previous:active,
+.products-paginator .next:active {
+	background-color: rgba(0, 0, 0, 0.08);
+	color: rgba(0, 0, 0, 0.3);
+
+}
