@@ -250,7 +250,7 @@
 		  	<section class="contacts wrapper">
 		  		<h2>Контакты</h2>
 		  		<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-		  		<a href="#">
+		  		<a class="js-open-map" href="#">
 		  			<img src="img/map.jpg" width="560" height="222" alt="часть карты с адресом компании: г.Москва, ул. Строителей, 15">
 		  		</a>
 		  		<a class="write-us" href="#">Напишите нам</a>
@@ -306,16 +306,16 @@
 
       <form class="wrapper" action="https://echo.htmlacademy.ru" method="post">
 	  			<div class="name">
-	  				<label for="name">Ваше имя:</label>
-	  				<input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+	  				<label for="user-name">Ваше имя:</label>
+	  				<input type="text" id="name" name="user-name" placeholder="Представьтесь, пожалуйста" >
 	  			</div>
 	  			<div class="email">
 	  				<label for="email">Ваш e&#x2010;mail:</label>
-	  				<input type="email" id="email" name="email" placeholder="Для отправки ответа">
+	  				<input type="email" id="email" name="email" placeholder="Для отправки ответа" >
 	  			</div>
 	  			<div class="letter">
 	  				<label for="text">Текст письма:</label>
-	  				<textarea id="text" name="text" placeholder="В свободной форме"></textarea>
+	  				<textarea id="text" name="text" placeholder="В свободной форме" ></textarea>
 	  			</div>
 	  			<button class="send" type="submit">Отправить</button>
 	  		</form>
@@ -323,9 +323,97 @@
 
    <div class="modal-content-map">
       <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-      <div id="yandex-map"></div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d8996.410481355666!2d37.5249401!3d55.6872036!3m2!1i1024!2i768!4f13.1!2m1!1z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINGD0LsuINCh0YLRgNC-0LjRgtC10LvQtdC5INC0LjE1!5e0!3m2!1sru!2sru!4v1486735890119" width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
+    	<script>
+    		var link = document.querySelector(".write-us");
+    		var popup = document.querySelector(".modal-content");
+    		var close = popup.querySelector(".modal-content-close");
+    		var login = popup.querySelector("[name=user-name]");
+    		var text = popup.querySelector("textarea");
+    		var form = popup.querySelector("form");
+    		
 
+    		  link.addEventListener("click", function(event) {
+    		  	 event.preventDefault();
+    		  	 popup.classList.remove("modal-content-closing");
+    		  	 popup.classList.add("modal-content-show");
+    		  	 login.focus();
+      });
+
+    		  close.addEventListener("click", function(event) {
+    		  	event.preventDefault();
+    		  	popup.classList.remove("modal-content-show");
+    		  	popup.classList.remove("modal-error");
+    		  	popup.classList.add("modal-content-closing");
+     });
+
+    		  window.addEventListener("keydown", function(event) {
+    		  	if (event.keyCode === 27) {
+    		  		if (popup.classList.contains("modal-content-show")) {
+    		  			popup.classList.remove("modal-content-show");
+    		  			popup.classList.remove("modal-error");
+    		  			popup.classList.add("modal-content-closing");
+    		  		}
+    		  	}
+      });
+
+    		   form.addEventListener("submit", function(event) {
+        if (!login.value) {
+          		event.preventDefault();
+          		popup.classList.remove("modal-error");
+          		popup.offsetWidth = popup.offsetWidth;
+          		popup.classList.add("modal-error");
+          		login.classList.add("invalid");
+       			}
+       	if	(!text.value) {
+          		event.preventDefault();
+          		popup.classList.remove("modal-error");
+          		popup.offsetWidth = popup.offsetWidth;
+          		popup.classList.add("modal-error");
+          		text.classList.add("invalid");
+       			}	
+       		});
+
+    		   login.addEventListener("click", function(event) {
+    		   	login.classList.remove("invalid");
+    		   });
+
+ 						text.addEventListener("click", function(event) {
+    		   	text.classList.remove("invalid");
+    		   });
+
+
+
+
+           var mapOpen = document.querySelector(".js-open-map");
+
+           var mapPopup = document.querySelector(".modal-content-map");
+           var mapClose = mapPopup.querySelector(".modal-content-close");
+
+
+           mapOpen.addEventListener("click", function(event) {
+           	event.preventDefault();
+           	mapPopup.classList.remove("modal-content-closing");
+           	mapPopup.classList.add("modal-content-show");
+           });
+
+           mapClose.addEventListener("click", function(event) {
+           	event.preventDefault();
+           	mapPopup.classList.remove("modal-content-show");
+           	mapPopup.classList.add("modal-content-closing");
+           });
+
+           window.addEventListener("keydown", function(event) {
+           	if (event.keyCode === 27) {
+           		if (mapPopup.classList.contains("modal-content-show")) {
+           			mapPopup.classList.remove("modal-content-show");
+           			mapPopup.classList.add("modal-content-closing");
+           		}
+           	}
+           });
+
+    	</script>
 
 </body>
 </html>

@@ -698,7 +698,6 @@ margin-left: auto;
 	background-color: #ffc600;
 }
 
-/*меньшая вложенность здесь не получается*/
 
 #btn-4:checked ~ .slider-toggles label[for="btn-4"],
 #btn-5:checked ~ .slider-toggles label[for="btn-5"],
@@ -750,7 +749,7 @@ margin-left: auto;
     background-position: -5px -5px;
 }
 
-/*меньшая вложенность здесь не получается*/
+
 
 #btn-4:checked ~ .slider-inner .service-item.delivery,
 #btn-5:checked ~  .slider-inner .service-item.warranty,
@@ -1097,10 +1096,6 @@ a.footer-logo{
 }
 
 
-
-
-
-
 .footer-service {
 	width: 440px;
 	margin: 0 0 60px 0;
@@ -1197,7 +1192,56 @@ a.footer-logo{
 	opacity: 0.3;
 }
 
+
+
+
 /*модальное окно - форма обратной связи*/
+
+@keyframes uprise {
+	0% {
+    transform: translateY(-150%) scale(0);
+  } 
+
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@keyframes closing {
+	0% {
+		transform: translateY(-50%) scale(1);
+	}
+	100% {
+		transform: translateY(-150%) scale(0);
+	}
+}
+
+@keyframes sigh {
+	
+	50% {
+		transform: translateY(-50%) scale(1.1);
+	}
+
+}
+
+/*модальное окно - карта*/
+
+.modal-content-map {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -480px;
+	transform: translateY(-50%);
+	width: 960px;
+	height: 559px;
+	background: #ffffff url("../img/map-big.jpg");
+	box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
 
 .modal-content {
 	display: none;
@@ -1211,8 +1255,25 @@ a.footer-logo{
 	margin-left: -480px;
 	background-color: #ffffff;
 	box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.15);
-
+  
 	}
+
+	.modal-content-show {
+  display: block;
+  animation: uprise 1s;
+}
+
+.modal-content-closing {
+	display: block;
+  animation: closing 1s;
+  animation-fill-mode: forwards;
+  
+}
+
+.modal-error {
+  animation: sigh 1s;
+}
+
 
 	.modal-content::before {
 		position: absolute;
@@ -1301,7 +1362,7 @@ form.wrapper {
 	letter-spacing: 0;
 }
 
-input[name="name"],
+input[name="user-name"],
 input[name="email"] {
 	width: 314px;
 	padding: 13px 20px;
@@ -1333,14 +1394,14 @@ input[name="email"] {
 	border: 3px solid #f2f2f2;
 }
 
-input[name="name"]:hover,
+input[name="user-name"]:hover,
 input[name="email"]:hover,
 .modal-content textarea:hover {
 	background-color: #ebebeb;
 	border-color: #ebebeb;
 } 
 
-input[name="name"]:focus,
+input[name="user-name"]:focus,
 input[name="email"]:focus,
 .modal-content textarea:focus {
 	background-color: #ffffff;
@@ -1349,7 +1410,9 @@ input[name="email"]:focus,
 } 
 
 
-input[name="email"]:invalid {
+input[name="email"]:invalid,
+input.invalid,
+textarea.invalid{
 	background-color: #ffdada;
 	border-color: #ffdada;
 }
@@ -1392,21 +1455,6 @@ input[name="email"]:invalid {
  	color: rgba(0, 0, 0, 0.3);
  	outline: none;
  }
-
-/*модальное окно - карта*/
-
-.modal-content-map {
-	display: none;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-left: -480px;
-	margin-top: -280px;
-	width: 960px;
-	height: 559px;
-	background: #ffffff url("../img/map-big.jpg");
-	box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.15);
-}
 
 
 
