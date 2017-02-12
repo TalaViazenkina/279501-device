@@ -30,20 +30,17 @@
 			<div class="service-block wrapper">
 				<nav class="catalog wrapper">
 					<a href="#" class="catalog-title">Каталог товаров</a>
-					<div class="catalog-items">
-						<ul>
-							<li><a href="#">Виртуальная реальность</a></li>
-							<li><a href="catalog.html">Моноподы для селфи</a></li>
-							<li><a href="#">Экшн&#x2010;камеры</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">Фитнесс&#x2010;браслеты</a></li>
-							<li><a href="#">Умные часы</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">Квадрокоптеры</a></li>
-						</ul>
-					</div>
+					<ul class="catalog-items">
+						<li><a href="#">Виртуальная реальность</a></li>
+						<li><a href="#">Фитнесс&#x2010;браслеты</a></li>
+						<li><a href="#">Квадрокоптеры</a></li>
+						<li><a href="catalog.html">Моноподы для селфи</a></li>
+						<li><a href="#">Умные часы</a></li>
+						<li><a href="#">Экшн&#x2010;камеры</a></li>
+
+						
+					</ul>
+					
 				</nav>
 
 				<ul class="service wrapper">
@@ -75,7 +72,8 @@
 					<section class="promo-item wrapper">
 						<img src="img/promo-selfie.png" width="560" height="500" alt="Самая длинная селфи-палка">
 						<section class="description">
-							<h2>Делай селфи, как Бен Стиллер!</h2>
+							<h2>Делай селфи, <br>
+							 как Бен Стиллер!</h2>
 							<p>Самая длинная палка для селфи доступна в нашем магазине.
 								Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
 							</p>
@@ -102,7 +100,8 @@
 					<section class="promo-item wrapper">
 						<img src="img/promo-bracelet.png" width="560" height="500" alt="Мотивирующий фитнесс-браслет">
 						<section class="description">
-							<h2>Худеем правильно!</h2>
+							<h2>Худеем <br>
+							правильно!</h2>
 							<p>Мотивирующие фитнесс&#x2010;браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
 							</p>
 							<a href="#">Подробнее</a>
@@ -143,16 +142,7 @@
 			<!--конец слайдера -->
 
 			<section class="popular wrapper"> 
-			<!--здесь я для реализации эффектов наведения думаю использовать вот такую конструкцию:
-			 <div class="bg">
-        <a href="#"> какой-то текст</a>
-       </div>
-
-      .bg нам нужен для создания оранжевого прямоугольника-фона, задаем фиксированные размеры (они меньше, чем размеры а) и overflow: visible; position: relative;
-       с помощью bg:hover цвет по наведению будет меняться на другой (более яркий) 
-
-      для а задаем нужную нам фоновую картинку, абсолютно позиционируем, так чтобы картинка расположилась над оранжевым фоном .bg, 
-      и задаем изменение  opacity при  a:active-->
+			
 	      <div class="popular-item">
 	      	<a class="virtual-reality" href="#">
 	      		Виртуальная реальность
@@ -160,7 +150,7 @@
 	      </div>
 	      <div class="popular-item">
 	      	<a class="monopod" href="catalog.html">
-	      		Моноподы для селфи
+	      		Моноподы для&nbsp;селфи
 	      	</a>
 	      </div>
 	      <div class="popular-item">
@@ -211,7 +201,7 @@
 	  			</section>
 	  			<section class="service-item warranty">
 	  				<h2>Гарантия</h2>
-	  				<p>Если из&#x2010;за возгарания купленного у нас товара у вас сгорит дом &mdash; не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+	  				<p>Если из&#x2010;за возгарания купленного у нас товара у вас сгорит дом &mdash; не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.
 	  				</p>
 	  			</section>
 	  			<section class="service-item credit">
@@ -283,7 +273,7 @@
 					<li><a href="#">Контакты</a></li>
 				</ul>
 
-				<div class="tel">Тел:+7(495) 495&#x2012;95&#x2012;95
+				<div class="tel">Тел: +7 (495) 495-95-95
 				</div>
 			</div>
 
@@ -307,7 +297,7 @@
       <form class="wrapper" action="https://echo.htmlacademy.ru" method="post">
 	  			<div class="name">
 	  				<label for="user-name">Ваше имя:</label>
-	  				<input type="text" id="name" name="user-name" placeholder="Представьтесь, пожалуйста" >
+	  				<input type="text" id="user-name" name="user-name" placeholder="Представьтесь, пожалуйста" >
 	  			</div>
 	  			<div class="email">
 	  				<label for="email">Ваш e&#x2010;mail:</label>
@@ -323,7 +313,7 @@
 
    <div class="modal-content-map">
       <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d8996.410481355666!2d37.5249401!3d55.6872036!3m2!1i1024!2i768!4f13.1!2m1!1z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINGD0LsuINCh0YLRgNC-0LjRgtC10LvQtdC5INC0LjE1!5e0!3m2!1sru!2sru!4v1486735890119" width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d8996.410481355666!2d37.5249401!3d55.6872036!3m2!1i1024!2i768!4f13.1!2m1!1z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINGD0LsuINCh0YLRgNC-0LjRgtC10LvQtdC5INC0LjE1!5e0!3m2!1sru!2sru!4v1486735890119" width="960" height="559" allowfullscreen></iframe>
     </div>
     	<script>
     		var link = document.querySelector(".write-us");

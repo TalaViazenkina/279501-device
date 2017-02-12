@@ -62,6 +62,9 @@ img {
 	height: auto;
 }
 
+.main-header {
+	padding-top: 12px;
+}
 
 .container {
   width: 1160px;
@@ -86,16 +89,17 @@ img {
 	content: "";
 	display: block;
 	width: 1160px;
-	height: 186px;
+	height: 190px;
 	background-color: #ffe27f;
 
 }
 
 
 .logo {
-	padding-left: 60px;
+	padding-left: 55px;
 	font-size: 48px;
 	line-height: 1.2em;
+	letter-spacing: 0.01em;
 	text-transform: uppercase;
 }
 
@@ -108,9 +112,10 @@ img {
 }
 
 .main-header .user-block{
-	padding-top: 10px;
+	align-items: baseline;
+	padding-top: 5px;
 	padding-right: 60px;
-	padding-bottom: 15px;
+	padding-bottom: 14px;
 	padding-left: 60px;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
@@ -127,13 +132,11 @@ img {
 
 }
 
-
-
-/* Осталась стилизация плейсхолдера*/
-
 .search-form .search {
-	width: 315px;
-	padding-left: 40px;
+	width: 311px;
+	height: 45px;
+	padding:0 0 0 38px;
+	box-sizing: content-box;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
@@ -141,14 +144,21 @@ img {
 	letter-spacing: 0.01em;
 	color: #000000;
 	border: none;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
 	background-color: transparent;
 	background-image: url("../img/icons/icons-sprite.png");
 	background-repeat: no-repeat; 
 	background-position: -10px -440px;
+	vertical-align: bottom;
 }
 
-.search-form .btn {
-	display: none;
+.search::-webkit-input-placeholder {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.search:hover::-webkit-input-placeholder {
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .search:focus {
@@ -156,9 +166,27 @@ img {
 	outline: none;
 }
 
+
+
+.search-form .btn {
+	display: none;
+	vertical-align: bottom;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 36px;
+	letter-spacing: 0.01em;
+	color: #000000;
+}
+
+
 .search:focus + .btn {
  display: inline-block;
+ vertical-align: bottom;
  width: 81px;
+ height: 45px;
+ padding: 0;
+ box-sizing: content-box;
  font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
@@ -175,17 +203,30 @@ img {
 	color: #ffffff;
 }
 
-/*какая-то фигня: нажатие не отображается и кнопка исчезает*/
 
-.search:focus + .btn:active {
+
+ .btn:active {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 81px;
+	height: 45px;
+	padding: 0;
+	box-sizing: content-box;
+ font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 36px;
+	letter-spacing: 0.01em;
+	border: 2px solid black;
 	background-color: #000000;
 	color: rgba(255, 255, 255, 0.3);
+	outline: none;
 }
 
 
 
 .personal{
-	flex-basis: 520px;
+	flex-basis: 500px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -213,10 +254,8 @@ img {
 	margin-left: 40px;
 }
 
-.personal a:not(.exit)::before {
+.personal a::before {
 	position: absolute;
-	bottom: 12px;
-	left: 5px;
 	content: "";
 	display: block;
 	background-image: url("../img/icons/icons-sprite.png");
@@ -224,12 +263,16 @@ img {
 }
 
 .personal .user::before {
+	left: 0px;
+	bottom: 12px;
 	width: 13px;
   height: 12px;
   background-position: -10px -254px;
 }
 
 .personal .compare::before {
+	bottom: 12px;
+	left: 5px;
 	width: 10px;
  	height: 10px;
   background-position: -10px -224px;
@@ -237,11 +280,16 @@ img {
 
 
 .personal .basket::before {
+	bottom: 11px;
+	left: 3px;
 	width: 12px;
   height: 12px;
   background-position: -10px -192px;
 }
 
+.personal .exit::before {
+	display: none;
+}
 
 .personal a:not(.exit):hover {
 	opacity: 0.6;
@@ -256,7 +304,7 @@ img {
 
 .main-header .service-block{
 	position: relative;
-	padding: 20px 60px 0;
+	padding: 18px 58px 0;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	
@@ -271,7 +319,7 @@ img {
 }
 
 .catalog {
-	flex-basis: 520px;
+	flex-basis: 500px;
 	padding-bottom: 20px;
 
 }
@@ -314,31 +362,29 @@ img {
 	right: 0px;
 
 	display: none;
-	width: 1100px;
-	padding-bottom: 30px;
-	padding-left: 60px;
+	width: 650px;
+	margin: 0;
+	padding: 0 450px 35px 60px;
+	list-style: none;
 	background-color: #ffe27f;
 }
 
 .catalog:hover .catalog-items{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 	
 }
 
-.catalog-items ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-
-.catalog-items ul:first-child {
-	padding-right: 40px;
-}
-
 .catalog-items li{
 	width: 200px;
+	flex-shrink: 0;
+}
+
+.catalog-items li:nth-child(1),
+.catalog-items li:nth-child(4),
+.catalog-items li:nth-child(5) {
+	padding-right: 38px;
 }
 
 
@@ -356,7 +402,7 @@ img {
 
 
 .service {
-	flex-basis: 520px;
+	flex-basis: 500px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -364,7 +410,7 @@ img {
 }
 
 .service li:first-child {
-	margin-right: 35px;
+	margin-right: 30px;
 }
 
 .service li:last-child {
@@ -381,14 +427,14 @@ margin-left: auto;
 
 .promo-slider {
 	position: relative;
-	padding-top: 25px;
-	margin-bottom: 100px;
+	padding-top: 30px;
+	margin-bottom: 95px;
 }
 
 
 .promo-slider::before {
 	position: absolute;
-	top: 25px;
+	top: 30px;
 	left: 0;
 	z-index: -1;
 	content: "";
@@ -454,27 +500,25 @@ margin-left: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 510px;
+	width: 515px;
 	padding-right: 50px;
-	padding-left: 20px;
+	padding-left: 15px;
 
 }
  .description h2 {
  	margin: 82px 0 0 0;
- 	width: 392px;
+ 	padding: 0;
  	font-size: 47px;
 	line-height: 1.2em;
+	letter-spacing: 0.01em;
  	font-weight: 800;
  	 }
 
- 	  .promo-item:nth-child(3) h2{
- 	 	width: 500px;
- 	 }
-
+ 
  	.description h2::before {
  		position:absolute;
  		right: 460px;
- 		top: 67px;
+ 		top: 69px;
  		content: "";
  		display: block;
  		width: 100px;
@@ -486,7 +530,7 @@ margin-left: auto;
  	.description h2::after {
  		z-index: -1;
  		position:absolute;
- 		top: 16px;
+ 		top: 18px;
  		right: 47px;
  		content: "01";
  		display: block;
@@ -506,17 +550,20 @@ margin-left: auto;
 	content: "03";
 }
 
-
- 	
-
  .description p {
- 	margin: 20px 0 45px 0;
+ 	margin: 18px 0 43px 5px;
+ 	width: 465px;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
+	letter-spacing: 0.01em;
 	color: #444444;
 	}
+
+ .promo-item:first-child p {
+ 	width: 485px;
+ }
 
  .description a {
  	position: relative;
@@ -524,6 +571,7 @@ margin-left: auto;
  	width: 220px;
  	padding-top: 10px;	
  	padding-bottom: 10px;
+ 	margin-left: 5px;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	text-align: center;
@@ -553,18 +601,23 @@ margin-left: auto;
 
  .promo-property {
  	list-style: none;
- 	margin: auto 0 0 0;
+ 	margin: auto 0 0 5px;
  	padding: 0;
  }
  
 .promo-property li{
 	display: inline-block;
-	margin-right: 75px;
+	margin-right: 74px;
 }
+
+.promo-item:last-child li {
+	margin-right: 42px;
+}
+
 
 .promo-property span:first-child {
 	display: block;
-	margin-bottom: 15px;
+	margin-bottom: 9px;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 36px;
@@ -576,6 +629,7 @@ margin-left: auto;
 .promo-property span:last-child {
 	display: block;
 	padding-bottom: 10px;
+	margin-bottom: 10px;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 13px;
@@ -584,13 +638,14 @@ margin-left: auto;
 }
 
  .popular {
- 	margin-bottom: 160px;
+ 	margin-bottom: 80px;
  }
 
  .popular-item {
  	position: relative;
  	width: 160px;
  	height: 160px;
+ 	margin-bottom: 80px;
  	background-color: #ffe27f;
  	overflow: visible;
  }
@@ -605,7 +660,7 @@ margin-left: auto;
  	left: 0;
  	display: block;
  	width: 160px;
- 	padding-top: 200px;
+ 	padding-top: 195px;
  	background-image: url("../img/popular-sprite.png");
   background-repeat: no-repeat;
  	
@@ -642,7 +697,7 @@ margin-left: auto;
 
 .service-slider {
 	position: relative;
-	margin-bottom: 160px;
+	margin-bottom: 162px;
 }
 
 .service-slider input {
@@ -672,9 +727,10 @@ margin-left: auto;
 	display: block;
 	width: 160px;
 	padding-top: 10px;
-	padding-right: 117px;
+	padding-right: 113px;
 	padding-bottom: 10px;
-	margin-bottom: 25px;
+	padding-left: 4px;
+	margin-bottom: 24px;
 	text-align: center;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
@@ -694,7 +750,7 @@ margin-left: auto;
 
 .slider-toggles label:hover{
 	padding-right: 0px;
-	margin-right: 117px;
+	margin-right: 113px;
 	background-color: #ffc600;
 }
 
@@ -703,7 +759,7 @@ margin-left: auto;
 #btn-5:checked ~ .slider-toggles label[for="btn-5"],
 #btn-6:checked ~ .slider-toggles label[for="btn-6"] {
 	margin-right: 0px;
-	padding-right: 117px;
+	padding-right: 113px;
 	color: #ffe27f;
 	background-color: #000000;
 }
@@ -727,7 +783,7 @@ margin-left: auto;
 
 .service-item.delivery::before {
 	top: 85px;
- 	right: 60px;
+ 	right: 67px;
  width: 136px;
     height: 164px;
     background-position: -171px -5px;
@@ -758,15 +814,17 @@ margin-left: auto;
 }
 
 .service-item h2 {
-	margin: 0;
+	margin: 0 0 27px 0;
 	font-size: 47px;
 	line-height: 1.2em;
 	font-weight: 800;
+	letter-spacing: 0.01em;
 	
 }
 
 .service-item p {
-	width: 435px;
+	width: 460px;
+	margin: 0;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 300;
 	font-size: 15px;
@@ -775,9 +833,12 @@ margin-left: auto;
 	color: #444444;
 	}
 
+.credit p {
+	width: 435px;
+}
 
 .logotypes {
-  margin-bottom: 90px;
+  margin-bottom: 95px;
 }
 
 .logotypes a {
@@ -830,6 +891,7 @@ margin-left: auto;
 
 .info {
 	margin-bottom: 80px;
+
 }
 
 .info  .wrapper {
@@ -840,10 +902,12 @@ margin-left: auto;
 }
 
 .info h2 {
+	padding-top: 8px;
 	font-size: 47px;
 	line-height: 1.2em;
 	font-weight: 800;
-	padding-top: 10px;
+	letter-spacing: 0.01em;
+	
 }
 
 
@@ -947,7 +1011,7 @@ margin-left: auto;
 
 
 .logistics {
-	margin: auto 0 0 0;
+	margin: 35px 0 0 0;
 	padding: 0;
 	font-size: 16px;
 	line-height: 40px;
@@ -981,7 +1045,7 @@ margin-left: auto;
 
 .main-footer {
 	
-	padding-top: 65px;
+	padding-top: 57px;
 	padding-bottom: 65px;
 	color: #ffffff;
 	background-color: #444444;
@@ -995,7 +1059,7 @@ margin-left: auto;
 
 
 a.footer-logo{
-	margin-bottom: 20px;
+	margin-bottom: 18px;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: 800;
 	font-size: 48px;
@@ -1018,7 +1082,7 @@ a.footer-logo{
 
 .footer-personal {
 	margin: 0;
-	padding: 0;
+	padding: 4px 0 0 0;
 	list-style: none;
 }
 
@@ -1098,12 +1162,16 @@ a.footer-logo{
 
 .footer-service {
 	width: 440px;
-	margin: 0 0 60px 0;
+	margin: 7px 23px 62px 0;
 	padding: 0;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	list-style: none;
 
+}
+
+.footer-service li:last-child {
+	margin-left: 10px;
 }
 
 .footer-service a:hover {
@@ -1124,12 +1192,21 @@ a.footer-logo{
 	text-transform: none;
 
 }
+.links {
+	position: relative;
+}
+
+.social {
+	
+	margin-left: auto;
+	padding-left: 30px;
+}
 
 .social a {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
-	margin: 0 7px;
+	margin: 0 5px;
 	font-size: 0;
 	vertical-align: top;
 	background-image: url("../img/icons/icons-sprite.png");
@@ -1162,12 +1239,19 @@ a.footer-logo{
 }
 
 .social::before {
+	position: absolute;
+	left: 0;
+	bottom: 17px;
 	content: "";
 	display: inline-block;
 	width: 80px;
 	height: 7px;
 	background-color: #ffe27f;
-	margin-right: 380px;
+	
+}
+
+.copyright {
+	margin-left: auto;
 }
 
 
@@ -1239,7 +1323,9 @@ a.footer-logo{
 	box-shadow: 0 8px 30px 8px rgba(0, 0, 0, 0.15);
 }
 
-
+iframe {
+	border: 0;
+}
 
 
 
@@ -1364,10 +1450,10 @@ form.wrapper {
 
 input[name="user-name"],
 input[name="email"] {
-	width: 314px;
-	padding: 13px 20px;
+	width: 324px;
+	padding: 13px 15px;
 	margin-top: 8px;
-	margin-bottom: 35px;
+	margin-bottom: 40px;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: normal;
 	font-size: 14px;
@@ -1380,9 +1466,9 @@ input[name="email"] {
 
 
 .modal-content textarea {
-	width: 714px;
-	height: 110px;
-	padding: 20px;
+	width: 724px;
+	height: 120px;
+	padding: 15px;
 	margin-top: 8px;
 	margin-bottom: 40px;
 	font-family: "Open Sans", Arial, sans-serif;
@@ -1463,10 +1549,11 @@ textarea.invalid{
 
 .catalog-main h1{
 	padding-left: 60px;
-	margin: 70px 0 15px 0;
+	margin: 65px 0 12px 0;
 	font-size: 47px;
 	line-height: 1.2em;
 	font-weight: 800;
+	letter-spacing: 0.01em;
 	
 
 }
@@ -1509,7 +1596,7 @@ textarea.invalid{
 .breadcrumbs a:not(.current)::after {
 	position: absolute;
 	top: 15px;
-	right: -7px;
+	right: -2px;
 	content: "";
 	display: block;
 	width: 4px;
@@ -1565,11 +1652,17 @@ textarea.invalid{
  }
 
  .filters h3 {
+ 	margin: 10px 0 18px 0;
  	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: 800;
  	font-size: 18px;
  	line-height: 1.2em;
  	
+ 	}
+
+ 	.filters-bluetooth h3 {
+ 		margin-top: 15px;
+ 		
  	}
 
 .filters label {
@@ -1617,7 +1710,7 @@ textarea.invalid{
 }
 
 .range-controls .toggle-max {
-  left: 103px;
+  left: 108px;
 }
 
 .price-controls {
@@ -1748,7 +1841,7 @@ textarea.invalid{
  	display: block;
  	width: 200px;
  	padding: 10px 0;	
- 	margin: 0;
+ 	margin: 30px 0 0 0;
  	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: 800;
 	font-size: 18px;
@@ -1824,11 +1917,12 @@ textarea.invalid{
   }
 
   ul.products-sort {
+  	margin-left: 5px;
   	margin-right: auto;
   }
 
   .products-sort li {
-  	margin-right: 5px;
+  	
   	margin-left: 5px;
   }
 
@@ -1877,7 +1971,7 @@ textarea.invalid{
 }
 
   .arrow-top a::before {
-  	left: 0;
+  	left: -15px;
   border-top-width: 0;
   border-right-color: transparent;
   border-left-color: transparent;
@@ -1942,13 +2036,18 @@ textarea.invalid{
 }
 
 .products-item h1 {
-	margin: 35px 0 0 0;
+	margin: 30px 0 0 0;
 	padding-left: 0;
 	width: 260px;
 	font-size: 18px;
 	line-height: 1.2em;
 	font-weight: 800;
+	letter-spacing: 0.01px
 
+}
+
+.products-item:nth-child(2) h1 {
+	width: 230px;
 }
 
 .products-item span {
@@ -2041,7 +2140,7 @@ textarea.invalid{
 .products-paginator {
 	width: 760px;
 	margin-top: 0;
-	margin-bottom: 75px;
+	margin-bottom: 70px;
 	margin-right: auto;
 	margin-left: 70px;
 	padding: 0;
@@ -2052,6 +2151,7 @@ textarea.invalid{
 
 .products-paginator li:first-child {
 	margin-right: auto;
+	padding-right: 5px;
 }
 
 .products-paginator li:last-child {
@@ -2060,11 +2160,15 @@ textarea.invalid{
 
 .products-paginator a {
 	display: block;
-	padding: 10px;
+	padding: 10px 11px;
+	font-size: 16px;
 	line-height: 50px;
+	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	color: rgba(0, 0, 0, 0.3);
 }
+
+
 
 .products-paginator a:hover {
  color: rgba(0, 0, 0, 0.6);
