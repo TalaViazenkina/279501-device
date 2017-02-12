@@ -14,12 +14,9 @@
 			</div>
 			<div class="user-block wrapper">
 				<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-					<!--добавила label, чтобы навесить на label картинку с лупой в качестве background-image + за счет этого картинка станет "функциональной"  -->
 					<input class="search" type="search" name="search" placeholder="Поиск по сайту">
-					
 					<button class="btn" type="submit">Найти</button>
 				</form>
-
 				<ul class="personal wrapper">
 					<li><a class="user" href="#">Валентин Петухов</a></li>
 					<li><a class= "exit" href="#">Выйти</a></li>
@@ -27,7 +24,6 @@
 					<li><a class="basket"  href="#">Корзина</a></li>
 				</ul>
 			</div>
-
 			<div class="service-block wrapper">
 				<nav class="catalog wrapper">
 					<a href="#" class="catalog-title">Каталог товаров</a>
@@ -38,11 +34,8 @@
 						<li><a href="catalog.html">Моноподы для селфи</a></li>
 						<li><a href="#">Умные часы</a></li>
 						<li><a href="#">Экшн&#x2010;камеры</a></li>
-
-						
 					</ul>
 				</nav>
-
 				<ul class="service wrapper">
 					<li><a href="#">Доставка</a></li>
 					<li><a href="#">Гарантия</a></li>
@@ -55,7 +48,6 @@
 	<main class="catalog-main">
 		<div class="container">
 			<h1>Моноподы для селфи</h1>
-			
 			<ul class="breadcrumbs">
 				<li>
 					<a href="index.html">Главная</a>
@@ -69,61 +61,46 @@
 			</ul>
 		</div>
 		<div class="wrapper">
-
 			<aside class="filters wrapper">
 				<h2>Фильтр:</h2>
 				<form class="filters-form" action="https://echo.htmlacademy.ru" method="get" oninput="maxcost.value=slider.value">
 					<div class="filters-cost">
 						<h3>Стоимость</h3>
-						
 						<div class="range-controls">
 							<div class="scale">
-            		<div class="bar"></div>
-            	</div>
-            	<div class="toggle toggle-min"></div>
-          		<div class="toggle toggle-max"></div>
-          	</div>
-        	
-        		<div class="price-controls">
-        			<label class="min-price">от <input name="min-price" type="text" value="0"></label>
-          		<label class="max-price">до <input name="max-price" type="text" value="5000"></label>
-        		</div>
-
+								<div class="bar"></div>
+							</div>
+							<div class="toggle toggle-min"></div>
+							<div class="toggle toggle-max"></div>
+						</div>
+						<div class="price-controls">
+							<label class="min-price">от <input name="min-price" type="text" value="0"></label>
+							<label class="max-price">до <input name="max-price" type="text" value="5000"></label>
+						</div>
 					</div>
-
 					<div class="filters-color">
 						<h3>Цвет</h3>
-							<input id="black" type="checkbox" name="black" checked>
-							<label for="black">Черный</label>
-						
-							<input id="white" type="checkbox" name="white">
-							<label for="white">Белый</label>
-						
-							<input id="blue" type="checkbox" name="blue" checked>
-							<label for="blue">Синий</label>
-						
-							<input id="red" type="checkbox" name="red" checked>
-							<label for="red">Красный </label>
-						
-							<input id="pink" type="checkbox" name="pink">
-							<label for="pink">Розовый</label>
+						<input id="black" type="checkbox" name="black" checked>
+						<label for="black">Черный</label>
+						<input id="white" type="checkbox" name="white">
+						<label for="white">Белый</label>
+						<input id="blue" type="checkbox" name="blue" checked>
+						<label for="blue">Синий</label>
+						<input id="red" type="checkbox" name="red" checked>
+						<label for="red">Красный </label>
+						<input id="pink" type="checkbox" name="pink">
+						<label for="pink">Розовый</label>
 					</div>
-
 					<div class="filters-bluetooth">
 						<h3>Bluetooth</h3>
-						
-							<input id="yes" type="radio" name="bluetooth" value="yes" checked>
-							<label for="yes">Есть</label>
-						
-							<input id="not" type="radio" name="bluetooth" value="not">
-							<label for="not">Нет</label>
+						<input id="yes" type="radio" name="bluetooth" value="yes" checked>
+						<label for="yes">Есть</label>
+						<input id="not" type="radio" name="bluetooth" value="not">
+						<label for="not">Нет</label>
 					</div>
-						
 					<button type="submit">Показать</button>
 				</form>
-				
 			</aside>
-
 			<section class="results wrapper">
 				<div class="container-sort wrapper">
 					<h2>Сортировка:</h2>
@@ -132,7 +109,6 @@
 						<li><a href="#">По типу</a></li>
 						<li><a href="#">По популярности</a></li>
 					</ul>
-
 					<ul class="arrows">
 						<li class="arrow-top">
 							<a href="#"></a>
@@ -142,14 +118,9 @@
 						</li>
 					</ul>
 				</div>
-				
 				<div class="products wrapper">
 					<article class="products-item">
-						<!--для каждого .products-item:
-						для div.products-purshase задаем те же размеры, что и у картинки (width="360" height="380"), полупрозрачный серый цвет и позицинируем над картинкой, задаем display:none; по наведению - display:block -->
-
 						<div class="products-picture">
-							<!--Значок NEW будет сделан как пседоэлемент .products-picture::before -->
 							<img src="img/selfie-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
 							<div class="products-purshase wrapper">
 								<a class="basket" href="#">В корзину</a>
@@ -162,19 +133,15 @@
 							</h1>
 							<span>500 руб.</span>
 						</div>
-						
-						
 					</article>
-
 					<article class="products-item">
 						<div class="products-picture">
 							<img src="img/selfie-professional.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
 							<div class="products-purshase wrapper">
-									<a class="basket" href="#">В корзину</a>
-									<a class="compare" href="#">Добавить к сравнению</a>
+								<a class="basket" href="#">В корзину</a>
+								<a class="compare" href="#">Добавить к сравнению</a>
 							</div>
 						</div>
-
 						<div class="name-and-price wrapper">
 							<h1>
 								<a href="#">Профессиональная селфи&#x2010;палка</a>
@@ -182,26 +149,21 @@
 							<span>1 500 руб.</span>
 						</div>
 					</article>
-
 					<article class="products-item">
 						<div class="products-picture">
 							<img src="img/selfie-insubmersible.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
 							<div class="products-purshase wrapper">
-									<a class="basket" href="#">В корзину</a>
-									<a class="compare" href="#">Добавить к сравнению</a>
+								<a class="basket" href="#">В корзину</a>
+								<a class="compare" href="#">Добавить к сравнению</a>
 							</div>
-
 						</div>
-
 						<div class="name-and-price wrapper">
 							<h1>
 								<a href="#">Непотопляемая селфи&#x2010;палка</a>
 							</h1>
 							<span>2 500 руб.</span>
 						</div>
-						
 					</article>
-
 					<article class="products-item">
 						<div class="products-picture">
 							<img src="img/selfie-hand.jpg" width="360" height="380" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
@@ -210,18 +172,14 @@
 								<a class="compare" href="#">Добавить к сравнению</a>
 							</div>
 						</div>
-
 						<div class="name-and-price wrapper">
 							<h1>
 								<a href="#">Селфи&#x2010;палка &laquo;Следуй за мной&raquo;</a>
 							</h1>
 							<span>4 900 руб.</span>
 						</div>
-
-						
 					</article>
 				</div>
-
 				<ul class="products-paginator wrapper">
 					<li>
 						<a class="previous" href="#">Назад</a>
@@ -239,11 +197,8 @@
 						<a class="next" href="#">Вперед</a>
 					</li>
 				</ul>
-
 			</section>
 		</div>
-
-
 	</main>
 
 	<footer class="main-footer">
@@ -256,22 +211,17 @@
 					<li><a  class="footer-basket" href="#">Корзина</a></li>
 				</ul>
 			</div>
-			
-
 			<div class="service-block wrapper">
 				<div class="address">г.Москва, ул. Строителей, 15 
 				</div>
-
 				<ul class="footer-service wrapper">
 					<li><a href="#">Доставка</a></li>
 					<li><a href="#">Гарантия</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
-
 				<div class="tel">Тел: +7 (495) 495-95-95
 				</div>
 			</div>
-
 			<div class="links wrapper">
 				<div class="social">
 					<a class="btn-fb" href="#">facebook</a>
@@ -283,7 +233,6 @@
 				</div>
 			</div>
 		</div>
-
 	</footer>  
 </body>
 </html>
