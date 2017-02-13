@@ -1279,6 +1279,14 @@ img {
 	display: block;
 }
 
+.filters-color input:checked + label:active::after {
+	display: none;
+}
+
+.filters-color input:not(:checked) + label:active::after {
+	display: block;
+}
+
 .filters-bluetooth input {
 	display: none;
 }
@@ -1322,6 +1330,14 @@ img {
 }
 
 .filters-bluetooth input:checked + label::after {
+	display: block;
+}
+
+.filters-bluetooth input:checked + label:active::after {
+	display: none;
+}
+
+.filters-bluetooth input:not(:checked) + label:active::after {
 	display: block;
 }
 
