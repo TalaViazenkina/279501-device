@@ -483,7 +483,8 @@ img {
 
 #btn-1:checked ~ .promo-controls label[for="btn-1"],
 #btn-2:checked ~ .promo-controls label[for="btn-2"],
-#btn-3:checked ~ .promo-controls label[for="btn-3"] {
+#btn-3:checked ~ .promo-controls label[for="btn-3"],
+.promo-controls label:active {
 	border-color: #000000;
 }
 
@@ -756,7 +757,8 @@ img {
 
 #btn-4:checked ~ .slider-toggles label[for="btn-4"],
 #btn-5:checked ~ .slider-toggles label[for="btn-5"],
-#btn-6:checked ~ .slider-toggles label[for="btn-6"] {
+#btn-6:checked ~ .slider-toggles label[for="btn-6"],
+.slider-toggles label:active {
 	margin-right: 0px;
 	padding-right: 113px;
 	color: #ffe27f;
@@ -765,7 +767,8 @@ img {
 
 #btn-4:checked ~ .slider-toggles label[for="btn-4"]::before,
 #btn-5:checked ~ .slider-toggles label[for="btn-5"]::before,
-#btn-6:checked ~ .slider-toggles label[for="btn-6"]::before {
+#btn-6:checked ~ .slider-toggles label[for="btn-6"]::before,
+.slider-toggles label:active::before {
 	display: none;
 }
 
@@ -1255,6 +1258,10 @@ img {
 	background-color: #cfcfcf;
 }
 
+.filters-color label:active::before {
+	background-color: #c5c5c5;
+}
+
 .filters-color label::after {
 	position: absolute;
 	left: 6px;
@@ -1296,6 +1303,10 @@ img {
 
 .filters-bluetooth label:hover::before {
 	border-color: #bdbdbd;
+}
+
+.filters-bluetooth label:active::before {
+	border-color: #aeaeae;
 }
 
 .filters-bluetooth label::after {
