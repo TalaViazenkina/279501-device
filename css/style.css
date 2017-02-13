@@ -244,13 +244,11 @@ img {
 	position: relative;
 	display: block;
 	padding-left: 25px;
-	
 }
 
 .personal .exit {
 	margin-left: 15px;
 	color: rgba(0, 0, 0, 0.3);
-	
 }
 
 .personal .basket {
@@ -379,7 +377,6 @@ img {
 	justify-content: flex-start;
 }
 
-
 .catalog-items li {
 	margin-right: 60px;
 }
@@ -397,7 +394,6 @@ img {
 	letter-spacing: 0.01em;
 	text-transform: none;
 }
-
 
 .service {
 	-ms-flex-preferred-size: 500px;
@@ -424,7 +420,7 @@ img {
 .promo-slider {
 	position: relative;
 	margin-bottom: 95px;
-	}
+}
 
 .promo-slider::before {
 	position: absolute;
@@ -458,7 +454,6 @@ img {
 	border-radius: 50%;
 	border: 3px solid rgba(0, 0, 0, 0.3);
 	vertical-align: top;
-
 }
 
 .promo-controls label:hover {
@@ -512,7 +507,6 @@ img {
 	letter-spacing: 0.01em;
 	font-weight: 800;
 }
-
 
 .description h2::before {
 	position:absolute;
@@ -1073,6 +1067,10 @@ img {
 	transform: rotate(45deg);
 }
 
+.catalog-main > .wrapper {
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+}
 
 .filters.wrapper,
 .results.wrapper {
