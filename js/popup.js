@@ -5,7 +5,6 @@ var login = popup.querySelector("[name=user-name]");
 var text = popup.querySelector("textarea");
 var form = popup.querySelector("form");
 
-
 link.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.remove("modal-content-closing");
@@ -55,13 +54,9 @@ text.addEventListener("click", function(event) {
   text.classList.remove("invalid");
 });
 
-
-
-
 var mapOpen = document.querySelector(".js-open-map");
 var mapPopup = document.querySelector(".modal-content-map");
 var mapClose = mapPopup.querySelector(".modal-content-close");
-
 
 mapOpen.addEventListener("click", function(event) {
   event.preventDefault();

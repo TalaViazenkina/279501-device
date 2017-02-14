@@ -38,7 +38,6 @@
 	font-style: normal;
 }
 
-
 body {
 	min-width: 1200px;
 	font-family: "Gilroy", Arial, sans-serif;
@@ -47,8 +46,8 @@ body {
 	line-height: 1.2em;
 	letter-spacing: 0.01em;
 	color: #000000;
+	background-color: #ffffff;
 }
-
 
 a {
 	text-decoration: none;
@@ -122,7 +121,6 @@ img {
 
 .search-form{
 	-ms-flex-preferred-size: 440px;
-	
 	flex-basis: 440px;
 	font-size: 0;
 }
@@ -1020,7 +1018,6 @@ img {
 	letter-spacing: 0.01em;
 }
 
-
 .breadcrumbs {
 	margin:  0 0 40px 0;
 	padding: 0 0 0 60px;
@@ -1106,10 +1103,6 @@ img {
 	padding-top: 40px;
 }
 
-/* вот здесь не очень красивый момент: высота блоков .filters h2
- и .container-sort h2 может измениться, но эти блоки должны 
- находиться над определенным цветом, а "высота" цвета у нас фиксированная */
-
 .filters h2,
 .container-sort h2 {
  	padding-top: 25px;
@@ -1148,8 +1141,6 @@ img {
  	margin-top: 30px;
  	border-top: 2px solid #000000;
 }
-
- /* фильтр цены*/
 
 .range-controls {
  	position: relative;
@@ -1435,8 +1426,6 @@ ul.products-sort {
 	opacity: 1;
 }
 
- /* стрелки сортировки "вверх-вниз"*/
-
 .arrows a{
  	display: block;
  	position: relative;
@@ -1623,7 +1612,6 @@ ul.products-sort {
 	letter-spacing: 0.01em;
 	color: rgba(0, 0, 0, 0.5);
 }
-
 
 .products-purshase .compare:hover {
 	color: #000000;
@@ -2198,6 +2186,3 @@ textarea.invalid{
  	color: rgba(0, 0, 0, 0.3);
  	outline: none;
 }
-
-
-
