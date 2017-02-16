@@ -13,20 +13,20 @@ link.addEventListener("click", function(event) {
 });
 
 close.addEventListener("click", function(event) {
- event.preventDefault();
- popup.classList.remove("modal-content-show");
- popup.classList.remove("modal-error");
- popup.classList.add("modal-content-closing");
+  event.preventDefault();
+  popup.classList.remove("modal-content-show");
+  popup.classList.remove("modal-error");
+  popup.classList.add("modal-content-closing");
 });
 
 window.addEventListener("keydown", function(event) {
- if (event.keyCode === 27) {
-  if (popup.classList.contains("modal-content-show")) {
-   popup.classList.remove("modal-content-show");
-   popup.classList.remove("modal-error");
-   popup.classList.add("modal-content-closing");
- }
-}
+  if (event.keyCode === 27) {
+    if (popup.classList.contains("modal-content-show")) {
+      popup.classList.remove("modal-content-show");
+      popup.classList.remove("modal-error");
+      popup.classList.add("modal-content-closing");
+    }
+  }
 });
 
 form.addEventListener("submit", function(event) {
@@ -72,9 +72,9 @@ mapClose.addEventListener("click", function(event) {
 
 window.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {
-   if (mapPopup.classList.contains("modal-content-show")) {
-    mapPopup.classList.remove("modal-content-show");
-    mapPopup.classList.add("modal-content-closing");
+    if (mapPopup.classList.contains("modal-content-show")) {
+      mapPopup.classList.remove("modal-content-show");
+      mapPopup.classList.add("modal-content-closing");
+    }
   }
-}
 });
