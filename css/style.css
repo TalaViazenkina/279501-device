@@ -1116,70 +1116,70 @@ img {
 
 .filters h2,
 .container-sort h2 {
- 	padding-top: 25px;
- 	padding-bottom: 25px;
- 	font-size: 16px;
- 	line-height: 1.2em;
- 	letter-spacing: 0.2em;
- 	text-transform: uppercase;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	font-size: 16px;
+	line-height: 1.2em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
 }
 
 .filters h2 {
- 	font-weight: 800;
+	font-weight: 800;
 }
 
 .filters h3 {
- 	margin: 12px 0 16px 0;
- 	font-family: "Gilroy", Arial, sans-serif;
- 	font-weight: 800;
- 	font-size: 18px;
- 	line-height: 1.2em;
+	margin: 12px 0 16px 0;
+	font-family: "Gilroy", Arial, sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 1.2em;
 }
 
 .filters label {
- 	font-family: "Open Sans", Arial, sans-serif;
- 	font-weight: 300;
- 	font-size: 14px;
- 	line-height: 40px;
- 	letter-spacing: 0.01em;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 40px;
+	letter-spacing: 0.01em;
 }
 
 .filters-form > div {
- 	margin-top: 30px;
- 	border-top: 2px solid #000000;
+	margin-top: 30px;
+	border-top: 2px solid #000000;
 }
 
 .range-controls {
- 	position: relative;
- 	padding-top: 20px;
- 	padding-bottom: 10px;
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
 
 .range-controls .scale {
- 	height: 2px;
- 	background: #dcdcdc;
+	height: 2px;
+	background: #dcdcdc;
 }
 
 .range-controls .bar {
- 	width: 55%;
- 	height: 2px;
- 	background: #72ca00;
+	width: 55%;
+	height: 2px;
+	background: #72ca00;
 }
 
 .range-controls .toggle {
- 	position: absolute;
- 	top: 14px;
- 	left: 0px;
- 	width: 10px;
- 	height: 10px;
- 	border: 2px solid #000000;
- 	border-radius: 50%;
- 	background-color: #efefef;
- 	cursor: pointer;
+	position: absolute;
+	top: 14px;
+	left: 0px;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #000000;
+	border-radius: 50%;
+	background-color: #efefef;
+	cursor: pointer;
 }
 
 .range-controls .toggle-max {
- 	left: 108px;
+	left: 108px;
 }
 
 .price-controls {
@@ -1442,11 +1442,11 @@ ul.products-sort {
 }
 
 .arrows a{
- 	display: block;
- 	position: relative;
- 	width: 20px;
- 	height: 20px;
- 	opacity: 0.2;
+	display: block;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	opacity: 0.2;
 }  
 
 .arrows a:hover {
@@ -1918,64 +1918,64 @@ a.footer-logo{
  /*модальные окна */
 
 @-webkit-keyframes uprise {
- 	0% {
- 		-webkit-transform: translateY(-150%) scale(0);
- 		transform: translateY(-150%) scale(0);
- 	} 
+	0% {
+		-webkit-transform: translateY(-150%) scale(0);
+		transform: translateY(-150%) scale(0);
+	} 
 
- 	100% {
- 		-webkit-transform: translateY(-50%) scale(1);
- 		transform: translateY(-50%) scale(1);
- 	}
+	100% {
+		-webkit-transform: translateY(-50%) scale(1);
+		transform: translateY(-50%) scale(1);
+	}
 }
 
 @keyframes uprise {
- 	0% {
- 		-webkit-transform: translateY(-150%) scale(0);
- 		transform: translateY(-150%) scale(0);
- 	} 
+	0% {
+		-webkit-transform: translateY(-150%) scale(0);
+		transform: translateY(-150%) scale(0);
+	} 
 
- 	100% {
- 		-webkit-transform: translateY(-50%) scale(1);
- 		transform: translateY(-50%) scale(1);
- 	}
+	100% {
+		-webkit-transform: translateY(-50%) scale(1);
+		transform: translateY(-50%) scale(1);
+	}
 }
 
 @-webkit-keyframes closing {
- 	0% {
- 		-webkit-transform: translateY(-50%) scale(1);
- 		transform: translateY(-50%) scale(1);
- 	}
- 	100% {
- 		-webkit-transform: translateY(-150%) scale(0);
- 		transform: translateY(-150%) scale(0);
- 	}
+	0% {
+		-webkit-transform: translateY(-50%) scale(1);
+		transform: translateY(-50%) scale(1);
+	}
+	100% {
+		-webkit-transform: translateY(-150%) scale(0);
+		transform: translateY(-150%) scale(0);
+	}
 }
 
 @keyframes closing {
- 	0% {
- 		-webkit-transform: translateY(-50%) scale(1);
- 		transform: translateY(-50%) scale(1);
- 	}
- 	100% {
- 		-webkit-transform: translateY(-150%) scale(0);
- 		transform: translateY(-150%) scale(0);
- 	}
+	0% {
+		-webkit-transform: translateY(-50%) scale(1);
+		transform: translateY(-50%) scale(1);
+	}
+	100% {
+		-webkit-transform: translateY(-150%) scale(0);
+		transform: translateY(-150%) scale(0);
+	}
 }
 
 @-webkit-keyframes sigh {
 
- 	50% {
- 		-webkit-transform: translateY(-50%) scale(1.1);
- 		transform: translateY(-50%) scale(1.1);
- 	}
+	50% {
+		-webkit-transform: translateY(-50%) scale(1.1);
+		transform: translateY(-50%) scale(1.1);
+	}
 }
 
 @keyframes sigh {
- 	50% {
- 		-webkit-transform: translateY(-50%) scale(1.1);
- 		transform: translateY(-50%) scale(1.1);
- 	}
+	50% {
+		-webkit-transform: translateY(-50%) scale(1.1);
+		transform: translateY(-50%) scale(1.1);
+	}
 }
 
 .modal-content-map {
@@ -2203,6 +2203,6 @@ textarea.invalid{
 }
 
 .modal-content .send:active {
- 	color: rgba(0, 0, 0, 0.3);
- 	outline: none;
+	color: rgba(0, 0, 0, 0.3);
+	outline: none;
 }
